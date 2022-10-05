@@ -1,0 +1,76 @@
+.digi-flex-continer {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 10%;
+  font-size: small;
+}
+
+.digi-flex-continer>div {
+  background-color: white;
+  width: 50px;
+  margin: 10px 4%;
+  text-align: center;
+  font-size: small;
+  line-height: 25px;
+  color: rgb(79, 79, 79);
+}
+
+.digi-flex-continer>div:hover {
+  padding: 0px;
+  cursor: pointer;
+  color: black;
+  font-weight: 500;
+}
+
+.flex-continer {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 15%;
+  font-size: small;
+}
+
+.flex-continer>div {
+  background-color: white;
+  width: 150px;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 25px;
+  border: 1px solid rgb(255, 0, 0);
+  border-top: 15px solid rgb(255, 11, 11);
+  border-bottom: 15px solid rgb(255, 11, 11);
+  border-radius: 1em;
+  padding: 15px;
+}
+
+.flex-continer>div:hover {
+  padding: 0px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.thrid-body {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: small;
+  margin-left: 14%;
+}
+
+.thrid-body>div {
+  background-color: white;
+  width: 21%;
+  text-align: center;
+  line-height: 25px;
+  padding: 15px;
+
+}
+
+.thrid-body>div:hover {
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.thrid-body img {
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 1em;
+}

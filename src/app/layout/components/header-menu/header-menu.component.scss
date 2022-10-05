@@ -1,0 +1,70 @@
+.flex-container {
+  display: flex;
+  //   flex-direction: row;
+  font-size: 15px;
+  text-align: center;
+  width: 45%;
+}
+
+a:hover {
+  border-bottom: 1.6px solid red;
+  // transition: width 0.3s;
+}
+
+a {
+  padding: 15px;
+  //   flex: 50%;
+  cursor: pointer;
+}
+
+.productsMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 0.5em;
+  width: 90%;
+  height: 580px;
+  margin-left: 2%;
+  margin-top: 10%;
+  background-color: white;
+  text-align: left;
+  padding: 15px;
+}
+
+.products:hover {
+  color: red;
+}
+
+mat-menu:hover>mat-icon {
+  color: red;
+}
+
+.productsMenu button+mat-icon:hover {
+  color: red;
+}
+
+div>button:hover {
+  background-color: rgb(0, 0, 149);
+  color: white;
+}
+
+// mat-icon:hover {
+//   color: yellow;
+// }
+.iconHover:hover {
+  color: red;
+}
+
+.iconHover:hover>mat-icon {
+  color: red;
+}
+
+
+.iconHover:hover>button {
+  color: blue;
+}
+
+.productsMenu button button:hover {
+  color: red;
+}
