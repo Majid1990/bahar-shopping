@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'app-header-menu',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-menu.component.scss']
 })
 export class HeaderMenuComponent implements OnInit {
-
+  @ViewChild(MatMenuTrigger) trigger?: MatMenuTrigger;
   productsVisibility: boolean = false;
   menuTrigger: any;
   constructor() { }
@@ -21,5 +22,8 @@ export class HeaderMenuComponent implements OnInit {
   }
   getRidOfPproducts() {
     this.hideProducts()
+  }
+  someMethod() {
+    this.trigger?.closeMenu(); // <-- put this in your dialog open method
   }
 }

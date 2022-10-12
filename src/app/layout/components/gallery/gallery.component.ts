@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class GalleryComponent implements OnInit {
   advertismentimages: any[] = ['../../../../assets/galery2.jpg', '../../../../assets/gallery3.jpg', '../../../../assets/gallery1.jpg', '../../../../assets/gallery4.gif'];
   selectedAdvertismentIndex: number = 0;
-  selectedAdvertismentImageUrl: string = '../../../../assets/gallery1.jpg';
+  selectedAdvertismentImageUrl: string = '../../../../assets/galery2.jpg';
 
   constructor() { }
 

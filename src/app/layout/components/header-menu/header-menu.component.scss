@@ -1,26 +1,44 @@
 .flex-container {
   display: flex;
-  //   flex-direction: row;
   font-size: 15px;
   text-align: center;
   width: 45%;
 }
 
-a:hover {
-  border-bottom: 1.6px solid red;
-  // transition: width 0.3s;
+a {
+  display: inline-block;
+  position: relative;
+  color: rgb(107, 107, 107);
+  padding: 15px;
+  cursor: pointer;
 }
 
-a {
-  padding: 15px;
-  //   flex: 50%;
-  cursor: pointer;
+a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.products {
+  color: black;
 }
 
 .productsMenu {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50px;
   border: 1px solid rgb(196, 196, 196);
   border-radius: 0.5em;
   width: 90%;
