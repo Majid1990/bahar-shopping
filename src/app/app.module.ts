@@ -5,11 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from './layout/layout.module';
-
+import { BestsellingComponent } from './bestselling/bestselling.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BestsellingComponent
   ],
   imports: [
     BrowserModule,

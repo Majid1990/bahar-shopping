@@ -74,3 +74,28 @@
   border: 1px solid rgb(255, 255, 255);
   border-radius: 1em;
 }
+
+.tableDiv table {
+  width: 100%;
+}
+
+.secondTable {
+  //display: flex;
+}
+
+.secondTable div div {
+
+  border: 0.1px solid rgb(238, 238, 238);
+  border-width: thin;
+  // width: 20%;
+  //height: 400px;
+}
+
+.secondTable div div:hover {
+  border: 1px solid rgb(181, 181, 181);
+  border-left: 0.5px solid rgb(181, 181, 181);
+  border-right: 0.5px solid rgb(181, 181, 181);
+  //box-shadow: 3px rgb(169, 36, 36);
+  margin: 0%;
+  cursor: pointer;
+}

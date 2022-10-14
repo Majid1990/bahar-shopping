@@ -24,3 +24,17 @@
   <div> <img src="../../../../assets/second-body-3.jpg" alt="Picture"></div>
   <div> <img src="../../../../assets/second-body-4.jpg" alt="Picture"></div>
 </div>
+
+<br>
+<div class="secondTable">
+  <div style="display: flex; flex-direction: row" class=" text-center">
+    <div *ngFor="let bs of bestSellers;let i = index"><img [src]="bs.imageUrl" width="60%" alt="picture">
+      <div> {{bs.name}} </div>
+      <div> Available {{bs.availableStock}} </div>
+      <div> Price {{bs.price}} </div>
+    </div>
+
+  </div>
+</div>
+<br>
+<hr>

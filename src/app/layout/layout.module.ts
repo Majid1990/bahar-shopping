@@ -13,8 +13,8 @@ import { SearchComponent } from './components/search/search.component';
 import { HeaderAdvertismentComponent } from './components/header-advertisment/header-advertisment.component';
 import { BasketComponent } from './components/basket/basket.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { BodyComponent } from './components/body/body.component';
 import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
 @NgModule({
   declarations: [
     LayoutComponent,
@@ -26,8 +26,7 @@ import { MatListModule } from '@angular/material/list';
     SearchComponent,
     HeaderAdvertismentComponent,
     BasketComponent,
-    GalleryComponent,
-    BodyComponent
+    GalleryComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +34,8 @@ import { MatListModule } from '@angular/material/list';
     MatMenuModule,
     MatButtonModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatTableModule
   ],
   exports: [LayoutComponent]
 })
