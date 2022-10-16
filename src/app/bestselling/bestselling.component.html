@@ -27,11 +27,11 @@
 
 <br>
 <div class="secondTable">
-  <div style="display: flex; flex-direction: row" class=" text-center">
+  <div class="flex flex-row text-center">
     <div *ngFor="let bs of bestSellers;let i = index"><img [src]="bs.imageUrl" width="60%" alt="picture">
-      <div> {{bs.name}} </div>
-      <div> Available {{bs.availableStock}} </div>
-      <div> Price {{bs.price}} </div>
+      <p> {{bs.name}} </p>
+      <p> Available {{bs.availableStock}} </p>
+      <p> Price {{bs.price}} </p>
     </div>
 
   </div>
