@@ -1,11 +1,11 @@
 .digi-flex-continer {
   display: flex;
-  flex-wrap: nowrap;
-  margin-left: 10%;
+  flex: wrap;
+  margin-left: 8%;
   font-size: small;
 }
 
-.digi-flex-continer>div {
+.digi-flex-continer div {
   background-color: white;
   width: 50px;
   margin: 10px 4%;
@@ -13,6 +13,8 @@
   font-size: small;
   line-height: 25px;
   color: rgb(79, 79, 79);
+  flex-direction: row;
+  justify-content: start;
 }
 
 .digi-flex-continer>div:hover {
@@ -22,30 +24,36 @@
   font-weight: 500;
 }
 
-.flex-continer {
+.recommendations-maindiv {
+  border: 5px solid rgba(255, 0, 0, 0.685);
+  border-radius: 0.5em;
+  margin: 2px 11%;
+  padding: 0px;
+}
+
+.recommendations-flex-continer {
   display: flex;
   flex-wrap: nowrap;
   margin-left: 15%;
   font-size: small;
 }
 
-.flex-continer>div {
+.recommendations-flex-continer>div {
   background-color: white;
   width: 150px;
   margin-top: 10px;
   text-align: center;
-  line-height: 25px;
-  border: 1px solid rgb(255, 0, 0);
-  border-top: 15px solid rgb(255, 11, 11);
-  border-bottom: 15px solid rgb(255, 11, 11);
-  border-radius: 1em;
-  padding: 15px;
+  line-height: 40px;
+  border: 1px solid rgb(255, 0, 0, 0.685);
+  //border-radius: 1em;
+  padding: 5px;
 }
 
-.flex-continer>div:hover {
-  padding: 0px;
+.recommendations-flex-continer>div:hover {
+  // padding: 15px;
   cursor: pointer;
-  transition: 0.4s;
+  // transition: 0.2s;
+  // margin-top: 3;
 }
 
 .thrid-body {
@@ -75,26 +83,22 @@
   border-radius: 1em;
 }
 
-// .tableDiv table {
-//   width: 100%;
-// }
-
-.secondTable {
-  border: 0px;
-  // width: 100%;
-}
-
-.secondTable div div {
-  border: 0.1px solid rgb(238, 238, 238);
+.bestSelling {
   padding: 10px;
   width: 100%;
   height: 350px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.secondTable div div:hover {
-  border: 1px solid rgb(181, 181, 181);
-  border-left: 0.5px solid rgb(181, 181, 181);
-  border-right: 0.5px solid rgb(181, 181, 181);
-  margin: 0%;
+.bestSelling>div {
+  border: 1px solid rgb(231, 231, 231);
+  width: 20%;
+  height: 400px;
+}
+
+.bestSelling>div:hover {
+  border: 1px solid rgb(126, 126, 126);
   cursor: pointer;
+  box-shadow: 1px 1px 6px 6px rgb(229, 229, 229);
 }

@@ -10,7 +10,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
 import { SearchComponent } from './components/search/search.component';
-import { HeaderAdvertismentComponent } from './components/header-advertisment/header-advertisment.component';
 import { BasketComponent } from './components/basket/basket.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { MatListModule } from '@angular/material/list';
@@ -24,7 +23,6 @@ import { MatTableModule } from '@angular/material/table';
     HeaderMenuComponent,
     HeaderMenuComponent,
     SearchComponent,
-    HeaderAdvertismentComponent,
     BasketComponent,
     GalleryComponent
   ],
