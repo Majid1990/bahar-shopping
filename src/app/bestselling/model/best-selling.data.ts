@@ -1,13 +1,14 @@
 export const BEST_SELLING_DATA = [
-    { imageUrl: '../../../../assets/body-11.jpg', name: 'Shirt', availableStock: 123, price: '235.56' },
-    { imageUrl: '../../../../assets/molfix.jpg', name: 'molfix', availableStock: 857, price: '2035.56' },
-    { imageUrl: '../../../../assets/khame.jpg', name: 'Cream', availableStock: 1857, price: '5.56' },
-    { imageUrl: '../../../../assets/khame.jpg', name: 'Cream', availableStock: 17, price: '50.56' },
-    { imageUrl: '../../../../assets/molfix.jpg', name: 'molfix', availableStock: 857, price: '2035.56' },
-    { imageUrl: '../../../../assets/molfix.jpg', name: 'molfix', availableStock: 857, price: '2035.56' },
-    { imageUrl: '../../../../assets/molfix.jpg', name: 'molfix', availableStock: 857, price: '2035.56' },
-    { imageUrl: '../../../../assets/molfix.jpg', name: 'molfix', availableStock: 857, price: '2035.56' },
-    { imageUrl: '../../../../assets/molfix.jpg', name: 'molfix', availableStock: 857, price: '2035.56' },
+    { imageUrl: '../../../assets/Best-sellings/1/1.jpg', name: 'Coffe maker', availableStock: 123, price: '235.56' },
+    { imageUrl: '../../../assets/Best-sellings/1/2.jpg', name: 'Light', availableStock: 857, price: '2035.56' },
+    { imageUrl: '../../../assets/Best-sellings/1/3.jpg', name: 'Bath pack', availableStock: 1857, price: '5.56' },
+    { imageUrl: '../../../assets/Best-sellings/1/4.jpg', name: 'Cloding', availableStock: 17, price: '50.56' },
+    { imageUrl: '../../../assets/Best-sellings/1/5.jpg', name: 'Molfix', availableStock: 857, price: '2035.56' },
+    { imageUrl: '../../../assets/Best-sellings/1/6.jpg', name: 'Apple watch', availableStock: 857, price: '2035.56' },
+    { imageUrl: '../../../assets/Best-sellings/1/7.jpg', name: 'Mac keyboard', availableStock: 857, price: '2035.56' },
+    { imageUrl: '../../../assets/Best-sellings/1/8.jpg', name: 'Toy', availableStock: 857, price: '2035.56' },
+    { imageUrl: '../../../assets/Best-sellings/1/9.jpg', name: 'Molfix', availableStock: 857, price: '2035.56' },
+    { imageUrl: '../../../assets/Best-sellings/1/10.jpg', name: 'Molfix', availableStock: 857, price: '2035.56' }
 ]
 
 export const JET_OPTIONS = [

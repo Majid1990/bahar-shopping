@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
@@ -10,6 +10,10 @@ export class HeaderMenuComponent implements OnInit {
   @ViewChild(MatMenuTrigger) trigger?: MatMenuTrigger;
   productsVisibility: boolean = false;
   menuTrigger: any;
+  @HostListener('majid') nyName: any = {
+
+  }
+
   constructor() { }
 
   ngOnInit(): void {
@@ -25,5 +29,9 @@ export class HeaderMenuComponent implements OnInit {
   }
   someMethod() {
     this.trigger?.closeMenu(); // <-- put this in your dialog open method
+  }
+
+  shangeTabbar(eve: any) {
+
   }
 }

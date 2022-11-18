@@ -14,6 +14,7 @@ import { BasketComponent } from './components/basket/basket.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
+import { NavbarScrollDirective } from './components/header-menu/navbar-scroll.directive';
 @NgModule({
   declarations: [
     LayoutComponent,
@@ -24,7 +25,8 @@ import { MatTableModule } from '@angular/material/table';
     HeaderMenuComponent,
     SearchComponent,
     BasketComponent,
-    GalleryComponent
+    GalleryComponent,
+    NavbarScrollDirective
   ],
   imports: [
     CommonModule,

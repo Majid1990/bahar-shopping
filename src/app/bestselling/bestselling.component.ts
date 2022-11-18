@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { BestSeller, DigiJet } from './model/best-seller.model';
-import { BEST_SELLING_DATA } from './model/best-selling.data';
+//import { BEST_SELLING_DATA } from './model/best-selling.data';
 import { JET_OPTIONS } from './model/best-selling.data';
+import { BestsellingService } from './Services/bestselling.service';
+
 
 @Component({
   selector: 'app-bestselling',
@@ -9,12 +11,19 @@ import { JET_OPTIONS } from './model/best-selling.data';
   styleUrls: ['./bestselling.component.scss']
 })
 export class BestsellingComponent implements OnInit {
-  bestSellers: BestSeller[] = BEST_SELLING_DATA;
+  bestSellers?: BestSeller[];
   jetMarketOptions: DigiJet[] = JET_OPTIONS;
 
-  constructor() { }
+  constructor(private bestSellingService: BestsellingService) { }
 
   ngOnInit(): void {
+    this.bestSellingService.getBestSellingData().subscribe(data => {
+      this.bestSellers = data
+    })
+  }
+
+  getPromotions() {
+
   }
 
 }
