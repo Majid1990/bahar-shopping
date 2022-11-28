@@ -1,19 +1,27 @@
  <div class="flex flex-row text-right fixed right-1 top-12">
    <div>
-     <mat-icon
-       class="hover:text-gray-900 text-gray-600 cursor-pointer text-2xl mt-3 ml-2; hover:duration-300 ease-in-out hover:text-blue-800">
-       shopping_basket
-     </mat-icon>
+
+     <button type="button" (click)="openDialog()">
+       <mat-icon
+         class="hover:text-gray-900 text-gray-600 cursor-pointer text-2xl mt-3 ml-2; hover:duration-300 ease-in-out hover:text-blue-800">
+         shopping_basket
+       </mat-icon>
+       <span style="font-size: x-small; position: absolute; top: 21%; right: 82%; color: red;
+         border-radius: 3em; padding: 0px 2px;">{{basketService.orderedItems.length}}</span>
+     </button>
    </div>
-   <div>
-     <span
-       class="relative top-2.5 login border rounded-md py-2.5 px-2.5 ml-5 text-sm duration-300 ease-in-out hover:bg-lime-700 hover:text-white cursor-pointer">
+   <div [routerLink]="'login'">
+     <span class="relative top-2.5 login border rounded-md py-2.5 px-2.5 ml-5 text-sm duration-300 ease-in-out 
+       hover:bg-lime-700 hover:text-white cursor-pointer">
        <span class="material-icons mr-1.5 relative top-1.5 text-lg">
          login
-       </span> | <span> Login </span>
+       </span>
+       | Login
      </span>
+
    </div>
  </div>
  <div class="fixed top-20 bg-red-700">
    <hr>
  </div>
+ <!-- <app-orderedlist></app-orderedlist> -->

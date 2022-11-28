@@ -1,0 +1,19 @@
+<div class="p-2.5 w-full flex flex-wrap text-sm">
+  <div class="flex justify-center w-1/5 border p-5 h-96 regal-blue border-inherit hover:shadow-2xl text-center
+             hover:border-slate-500 hover:cursor-pointer 3xl" *ngFor="let bs of bestSellers;let i = index">
+    <div class="flex flex-wrap flex-col content-around">
+      <img [src]="bs.imageUrl" width="150px" style="height: 150px" alt="picture">
+      <br>
+      <div class="content-end justify-center">
+        <p class="text-sky-700"> {{bs.name}} </p>
+        <p> Available: <span class="text-lime-900">{{bs.availableStock}}</span></p>
+        <p> Price: <span class="text-lime-900">{{bs.price}}</span> </p>
+        <p> Disscount: <span class="text-lime-900"> 25%:</span></p>
+        <br>
+        <span (click)="addToOrder(bs)"
+          class="hover:bg-cyan-600 hover:text-white bg-slate-100 border text-sky-700 p-1.5 duration-300 ease-in-out">
+          Add to order</span>
+      </div>
+    </div>
+  </div>
+</div>

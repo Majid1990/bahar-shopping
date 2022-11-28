@@ -11,10 +11,17 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
 import { SearchComponent } from './components/search/search.component';
 import { BasketComponent } from './components/basket/basket.component';
-import { GalleryComponent } from './components/gallery/gallery.component';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { NavbarScrollDirective } from './components/header-menu/navbar-scroll.directive';
+import { OrderedlistComponent } from './components/basket/orderedlist/orderedlist.component';
+import { LoginComponent } from './components/basket/login/login.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+
+
 @NgModule({
   declarations: [
     LayoutComponent,
@@ -25,8 +32,12 @@ import { NavbarScrollDirective } from './components/header-menu/navbar-scroll.di
     HeaderMenuComponent,
     SearchComponent,
     BasketComponent,
-    GalleryComponent,
-    NavbarScrollDirective
+    NavbarScrollDirective,
+    OrderedlistComponent,
+    LoginComponent,
+
+
+
   ],
   imports: [
     CommonModule,
@@ -35,7 +46,11 @@ import { NavbarScrollDirective } from './components/header-menu/navbar-scroll.di
     MatButtonModule,
     MatIconModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatDialogModule
   ],
   exports: [LayoutComponent]
 })

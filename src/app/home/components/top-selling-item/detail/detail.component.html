@@ -1,0 +1,40 @@
+<div style="text-align: end; padding-left: 10%; padding-top: 5%; background-color: rgb(255, 255, 255);">
+  <div class="flex flex-row detail" style=" text-align: left;">
+
+    <div style=" width: 100%; border: 1px solid rgb(246, 246, 246); background-color: rgba(239, 239, 239, 0.375); 
+      width: 80%; padding: 3%; line-height: 2em;">
+
+      <div class="grid grid-cols-2 gap-4">
+        <span class="text-green-900 text-4xl">{{productDetail.name }}</span>
+
+        <div> <img class="rounded-sm" style="height:150px;" [src]="productDetail.image" alt="Can't display"></div>
+      </div>
+      <div style="width: 200px;" class="grid grid-cols-2">
+        <div> Price:</div>
+        <div><span class="text-green-900">{{productDetail.price}}</span></div>
+        <div> Availabile:</div>
+        <div> <span class="text-green-900">{{productDetail.availability}}</span></div>
+        <div> ID:</div>
+        <div> <span class="text-green-900">{{productDetail.id}}</span></div>
+
+        <div> Weight:</div>
+        <div> <span class="text-green-900">{{productDetail.weight}}</span></div>
+
+        <div> Color:</div>
+        <div> <span class="text-green-900">{{productDetail.color}}</span></div>
+
+        <div> Produced year:</div>
+        <div> <span class="text-green-900">{{productDetail.producedYear}}</span></div>
+
+        <div> Waranty:</div>
+        <div> <span class="text-green-900">{{productDetail.waranty}}</span></div>
+
+      </div>
+      <br>
+      <button type="button" (click)="addToOrder(productDetail)" class="text-slate-600 bg-slate-100 text-sm border border-slate-400 
+          duration-200 ease-in-out rounded-sm cursor-pointer p-1
+          leading-8 hover:border-slate-900 hover:bg-blue-700 hover:text-white cursor-pointer">
+        Add to order </button>
+
+    </div>
+  </div>

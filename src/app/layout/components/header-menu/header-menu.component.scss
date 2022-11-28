@@ -25,6 +25,11 @@ a:hover:after {
   transition: 005;
 }
 
+a:hover {
+  // font-weight: bold;
+  color: black;
+}
+
 mat-menu:hover>mat-icon {
   color: red;
 }

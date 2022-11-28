@@ -1,4 +1,6 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ITopSellingItem } from '../home/components/top-selling/model/top-selling.model';
+import { BasketService } from './components/basket/service/basket.service';
 
 @Component({
   selector: 'app-layout',
@@ -6,18 +8,17 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-  // @HostListener("window:scroll", []) onWindowScroll() {
-  //   // do some stuff here when the window is scrolled
-  //   const verticalOffset = window.pageYOffset
-  //     || document.documentElement.scrollTop
-  //     || document.body.scrollTop || 0;
-  // }
 
+  title = 'bahar-shopping';
+  purchased?: ITopSellingItem[] = []
+  builder: any;
 
   productsVisibility: boolean = false;
+  constructor(private basketService: BasketService) { }
 
-
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.purchased = this.basketService.orderedItems;
+  }
 
   onScroll(eve: any) { }
 

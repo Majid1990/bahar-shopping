@@ -1,12 +1,14 @@
  <div style="background-color: rgba(243, 255, 237, 0.616);" (scroll)="shangeTabbar($event.target)">
-
-   <div class="flex-container flex text-sm text-center w-5/12 mt-24 ">
-     <a class="shrink w-64 h-14 text-black" href="#" (mouseover)="showProducts()"
-       (mouseenter)="menuTrigger.openMenu()">Products</a>
+   <!-- (mouseover)="showProducts()" -->
+   <div class="flex-container flex text-sm text-center w-6/12 mt-24 ">
+     <a class="shrink w-64 h-14 text-black" href="#">Products</a>
+     <!-- (mouseenter)="menuTrigger.openMenu()" -->
+     <a class="shrink w-64 h-14" [routerLink]="['/home']" (mouseover)="hideProducts()">Home</a>
      <a class="shrink w-64 h-14" href="#" (mouseover)="hideProducts()">Market</a>
-     <a class="shrink w-64 h-14" href="#" (mouseover)="hideProducts()">Best selling</a>
+     <a class="shrink w-80 h-14" (mouseover)="hideProducts()">Best selling</a>
      <a class="shrink w-64 h-14" href="#" (mouseover)="hideProducts()">Promotions</a>
      <a class="shrink w-64 h-14" href="#" (mouseover)="hideProducts()">Recommendations</a>
+     <a class="shrink w-80 h-14" (mouseover)="hideProducts()">Top selling</a>
    </div>
 
    <div class="productsMenu fixed top-0 left-12 border rounded-lg w-11/12 h-3/4 ml-4 mt-40 bg-white text-left p-3.5"
@@ -17,7 +19,11 @@
        <mat-icon (mouseover)="productsVisibility = true">more_vert</mat-icon>
      </button>
 
-     <div (mouseenter)="menuTrigger.openMenu()">
+     <div>
+       <!-- <button type="button" style="text-align: center; background-color: red; color: white;" mat-button
+         mat-dialog-close>
+         <mat-icon>close</mat-icon>
+       </button> -->
        <mat-menu #animals="matMenu" class="py-4 px-3">
          <!-- <button class="iconHover" mat-menu-item [matMenuTriggerFor]="vertebrates">
            <mat-icon class="iconHover">tablet_mac</mat-icon>Product based on the price

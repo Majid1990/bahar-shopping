@@ -34,4 +34,7 @@ export class HeaderMenuComponent implements OnInit {
   shangeTabbar(eve: any) {
 
   }
+  // openMyMenu(menuTrigger: MatMenuTrigger) {
+  //   menuTrigger.openMenu();
+  // }
 }

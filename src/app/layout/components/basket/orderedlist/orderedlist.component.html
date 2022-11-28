@@ -1,0 +1,41 @@
+<div style="text-align: end;">
+  <button type="button" style="text-align: center; background-color: red; color: white;" mat-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+  <h1 *ngIf="orderedItems.length >= 1" style="text-align: center;"> Your orders </h1>
+
+  <div *ngFor="let item of orderedItems" style="overflow: auto; height: auto; width: auto; margin: 30px;">
+    <div mat-dialog-content></div>
+    <div mat-dialog-actions></div>
+    <div class="flex flex-row" style="text-align: left;">
+      <div style="margin-bottom: 10px;">
+        <div> <img class="rounded-sm" style="height:120px;  position: relative; top: 0px; right: 0px;" width="150px"
+            [src]="item?.image" alt="Can't display"></div>
+        <div> <span class="text-blue-900 text-xl">{{item?.name }}</span></div>
+        <div> Price: <span class="text-green-900">{{item?.price}}</span></div>
+        <div> Availabile: <span class="text-green-900">{{item?.availability}}</span></div>
+        <div> ID: <span class="text-blue-900 text-xl">{{item?.id }}</span></div>
+        <div> Weight: <span class="text-green-900">{{item?.weight}}</span></div>
+        <div> Color: <span class="text-green-900">{{item?.color}}</span></div>
+        <div> produced year: <span class="text-green-900">{{item?.producedYear}}</span></div>
+        <div> Waranty: <span class="text-green-900">{{item?.waranty}}</span></div>
+        <br>
+        <button type="button" class="text-slate-600 bg-slate-100 text-sm border border-slate-400 
+                 duration-200 ease-in-out rounded-sm cursor-pointer p-1
+                 leading-8 hover:border-slate-900 hover:bg-green-700 hover:text-white cursor-pointer">
+          Go to payment </button>
+        <button type="button" (click)="cancelItem(item.id)" class="text-slate-600 bg-slate-100 text-sm border border-slate-400 
+                 duration-200 ease-in-out rounded-sm cursor-pointer p-1 ml-1
+                 leading-8 hover:border-slate-900 hover:bg-rose-900 hover:text-white"> Cancel Item</button>
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>
+<div *ngIf="orderedItems.length < 1" class="text-center">
+  <h1 style="text-align: center; color: red;"> You have no orders yet</h1>
+  <mat-icon style="font-size: 50px; text-align: center;"
+    class="hover:text-gray-900 text-gray-600 cursor-pointer hover:duration-300 ease-in-out hover:text-blue-800">
+    shopping_cart
+  </mat-icon>
+</div>
