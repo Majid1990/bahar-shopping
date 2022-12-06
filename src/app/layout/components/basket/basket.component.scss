@@ -1,1 +1,13 @@
+.person {
+  border: 1px solid rgb(99, 99, 99);
+  border-radius: 0.2em;
+  padding-top: 2px;
+  font-size: large;
+  color: rgb(49, 49, 49);
+}
 
+.person:hover {
+  background-color: rgb(213, 172, 105);
+  color: black;
+  font-size: large;
+}

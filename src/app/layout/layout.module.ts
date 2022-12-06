@@ -14,8 +14,6 @@ import { BasketComponent } from './components/basket/basket.component';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { NavbarScrollDirective } from './components/header-menu/navbar-scroll.directive';
-import { OrderedlistComponent } from './components/basket/orderedlist/orderedlist.component';
-import { LoginComponent } from './components/basket/login/login.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
@@ -33,11 +31,6 @@ import { MatDialogModule } from '@angular/material/dialog';
     SearchComponent,
     BasketComponent,
     NavbarScrollDirective,
-    OrderedlistComponent,
-    LoginComponent,
-
-
-
   ],
   imports: [
     CommonModule,

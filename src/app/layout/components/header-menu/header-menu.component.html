@@ -1,102 +1,96 @@
- <div style="background-color: rgba(243, 255, 237, 0.616);" (scroll)="shangeTabbar($event.target)">
-   <!-- (mouseover)="showProducts()" -->
-   <div class="flex-container flex text-sm text-center w-6/12 mt-24 ">
-     <a class="shrink w-64 h-14 text-black" href="#">Products</a>
-     <!-- (mouseenter)="menuTrigger.openMenu()" -->
-     <a class="shrink w-64 h-14" [routerLink]="['/home']" (mouseover)="hideProducts()">Home</a>
-     <a class="shrink w-64 h-14" href="#" (mouseover)="hideProducts()">Market</a>
-     <a class="shrink w-80 h-14" (mouseover)="hideProducts()">Best selling</a>
-     <a class="shrink w-64 h-14" href="#" (mouseover)="hideProducts()">Promotions</a>
-     <a class="shrink w-64 h-14" href="#" (mouseover)="hideProducts()">Recommendations</a>
-     <a class="shrink w-80 h-14" (mouseover)="hideProducts()">Top selling</a>
-   </div>
+<div style="background-color: rgba(237, 249, 255, 0.275);" (scroll)="shangeTabbar($event.target)">
+  <!-- (mouseover)="showProducts()" -->
+  <div class="flex-container flex text-sm text-center w-6/12 mt-24 ">
+    <a class="shrink w-64 h-14 text-black" href="#">Products</a>
+    <!-- (mouseenter)="menuTrigger.openMenu()" -->
+    <a class="shrink w-64 h-14" [routerLink]="['/home']" (mouseover)="hideProducts()">Home</a>
+    <a class="shrink w-64 h-14" href="#" (mouseover)="hideProducts()">Market</a>
+    <a class="shrink w-80 h-14" [routerLink]="'best-seller'" (mouseover)="hideProducts()">Best seller</a>
+    <a class="shrink w-64 h-14" href="#" (mouseover)="hideProducts()">Promotions</a>
+    <a class="shrink w-64 h-14" href="#" (mouseover)="hideProducts()">Recommendations</a>
+    <a class="shrink w-80 h-14" [routerLink]="'top-seller'" (mouseover)="hideProducts()">Top seller</a>
+  </div>
 
-   <div class="productsMenu fixed top-0 left-12 border rounded-lg w-11/12 h-3/4 ml-4 mt-40 bg-white text-left p-3.5"
-     *ngIf="productsVisibility" (mouseout)="productsVisibility = true">
-     <button (mouseover)="productsVisibility = true" color="primary"
-       class="cursor-pointer hover:bg-white hover:text-indigo-800" mat-raised-button mat-button
-       [matMenuTriggerFor]="animals">
-       <mat-icon (mouseover)="productsVisibility = true">more_vert</mat-icon>
-     </button>
+  <div class="productsMenu fixed top-0 left-12 border rounded-lg w-11/12 h-3/4 ml-4 mt-40 bg-white text-left p-3.5"
+    *ngIf="productsVisibility" (mouseout)="productsVisibility = true">
+    <button (mouseover)="productsVisibility = true" color="primary"
+      class="cursor-pointer hover:bg-white hover:text-indigo-800" mat-raised-button mat-button
+      [matMenuTriggerFor]="animals">
+      <mat-icon (mouseover)="productsVisibility = true">more_vert</mat-icon>
+    </button>
 
-     <div>
-       <!-- <button type="button" style="text-align: center; background-color: red; color: white;" mat-button
-         mat-dialog-close>
-         <mat-icon>close</mat-icon>
-       </button> -->
-       <mat-menu #animals="matMenu" class="py-4 px-3">
-         <!-- <button class="iconHover" mat-menu-item [matMenuTriggerFor]="vertebrates">
-           <mat-icon class="iconHover">tablet_mac</mat-icon>Product based on the price
-         </button> -->
-         <button class="iconHover" mat-menu-item [matMenuTriggerFor]="vertebrates">
-           <mat-icon class="iconHover">tablet_mac</mat-icon>Phones
-         </button>
-         <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
-           <mat-icon class="iconHover">laptop_chromebook</mat-icon>Laptops
-         </button>
-         <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
-           <mat-icon class="iconHover">tv</mat-icon>TV
-         </button>
-         <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
-           <mat-icon class="iconHover">desktop_windows</mat-icon>Monitor
-         </button>
-         <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
-           <mat-icon>tablet_android</mat-icon>Tablet
-         </button>
-         <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
-           <mat-icon class="iconHover">videogame_asset</mat-icon>PS5
-         </button>
-         <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
-           <mat-icon class="iconHover">build</mat-icon>Industrial tools and equipment
-         </button>
-         <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
-           <mat-icon class="iconHover">local_florist</mat-icon>Beauty and health
-         </button>
-         <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
-           <mat-icon class="iconHover">local_florist</mat-icon>Fashion and clothing
-         </button>
-       </mat-menu>
+    <div>
 
-       <mat-menu #vertebrates="matMenu" class="ml-3">
-         <button mat-menu-item [matMenuTriggerFor]="fish">Apple</button>
-         <button mat-menu-item [matMenuTriggerFor]="amphibians">Samsung</button>
-         <button mat-menu-item [matMenuTriggerFor]="reptiles">LG</button>
-         <button mat-menu-item>Nokia</button>
-         <button mat-menu-item>Sony</button>
-       </mat-menu>
+      <mat-menu #animals="matMenu" class="py-4 px-3">
+        <button class="iconHover" mat-menu-item [matMenuTriggerFor]="vertebrates">
+          <mat-icon class="iconHover">tablet_mac</mat-icon>Phones
+        </button>
+        <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
+          <mat-icon class="iconHover">laptop_chromebook</mat-icon>Laptops
+        </button>
+        <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
+          <mat-icon class="iconHover">tv</mat-icon>TV
+        </button>
+        <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
+          <mat-icon class="iconHover">desktop_windows</mat-icon>Monitor
+        </button>
+        <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
+          <mat-icon>tablet_android</mat-icon>Tablet
+        </button>
+        <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
+          <mat-icon class="iconHover">videogame_asset</mat-icon>PS5
+        </button>
+        <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
+          <mat-icon class="iconHover">build</mat-icon>Industrial tools and equipment
+        </button>
+        <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
+          <mat-icon class="iconHover">local_florist</mat-icon>Beauty and health
+        </button>
+        <button class="iconHover" type="button" mat-menu-item [matMenuTriggerFor]="invertebrates">
+          <mat-icon class="iconHover">local_florist</mat-icon>Fashion and clothing
+        </button>
+      </mat-menu>
 
-       <mat-menu #invertebrates="matMenu" class="ml-3">
-         <button mat-menu-item>Mac</button>
-         <button mat-menu-item>HP</button>
-         <button mat-menu-item>Dell</button>
-         <button mat-menu-item>Acer</button>
-         <button mat-menu-item>Tushiba</button>
-         <button mat-menu-item>Asus</button>
-       </mat-menu>
+      <mat-menu #vertebrates="matMenu" class="ml-3">
+        <button mat-menu-item [matMenuTriggerFor]="fish">Apple</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Samsung</button>
+        <button mat-menu-item [matMenuTriggerFor]="reptiles">LG</button>
+        <button mat-menu-item>Nokia</button>
+        <button mat-menu-item>Sony</button>
+      </mat-menu>
 
-       <mat-menu #fish="matMenu" class="ml-3">
-         <button mat-menu-item>Iphone 14</button>
-         <button mat-menu-item>Iphone 13</button>
-         <button mat-menu-item>Iphone 12</button>
-         <button mat-menu-item>Iphone 10</button>
-         <button mat-menu-item>Iphone 8</button>
-       </mat-menu>
+      <mat-menu #invertebrates="matMenu" class="ml-3">
+        <button mat-menu-item>Mac</button>
+        <button mat-menu-item>HP</button>
+        <button mat-menu-item>Dell</button>
+        <button mat-menu-item>Acer</button>
+        <button mat-menu-item>Tushiba</button>
+        <button mat-menu-item>Asus</button>
+      </mat-menu>
 
-       <mat-menu #amphibians="matMenu" class="ml-3">
-         <button mat-menu-item>Note 20 ultra</button>
-         <button mat-menu-item>Note 10</button>
-         <button mat-menu-item>S 22</button>
-         <button mat-menu-item>A 20</button>
-       </mat-menu>
+      <mat-menu #fish="matMenu" class="ml-3">
+        <button mat-menu-item>Iphone 14</button>
+        <button mat-menu-item>Iphone 13</button>
+        <button mat-menu-item>Iphone 12</button>
+        <button mat-menu-item>Iphone 10</button>
+        <button mat-menu-item>Iphone 8</button>
+      </mat-menu>
 
-       <mat-menu #reptiles="matMenu" class="ml-3">
-         <button type="button" mat-menu-item>LG EXR</button>
-         <button mat-menu-item>LG EX</button>
-         <button mat-menu-item>LG P12</button>
-         <button mat-menu-item>LG P14</button>
-         <button mat-menu-item disabled>LG 5160</button>
-       </mat-menu>
-     </div>
+      <mat-menu #amphibians="matMenu" class="ml-3">
+        <button mat-menu-item>Note 20 ultra</button>
+        <button mat-menu-item>Note 10</button>
+        <button mat-menu-item>S 22</button>
+        <button mat-menu-item>A 20</button>
+      </mat-menu>
 
-   </div>
- </div>
+      <mat-menu #reptiles="matMenu" class="ml-3">
+        <button type="button" mat-menu-item>LG EXR</button>
+        <button mat-menu-item>LG EX</button>
+        <button mat-menu-item>LG P12</button>
+        <button mat-menu-item>LG P14</button>
+        <button mat-menu-item disabled>LG 5160</button>
+      </mat-menu>
+    </div>
+
+  </div>
+</div>

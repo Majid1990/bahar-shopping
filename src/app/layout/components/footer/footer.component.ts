@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-
+  windowScrolled = false;
   constructor() { }
 
   ngOnInit(): void {
+    window.addEventListener('scroll', () => {
+      this.windowScrolled = window.pageYOffset !== 0;
+    });
+  }
+
+  backToTop() {
+    window.scrollTo(0, 0);
   }
 
 }

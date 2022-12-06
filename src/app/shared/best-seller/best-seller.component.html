@@ -1,0 +1,53 @@
+<!-- <div class="flex flex-wrap ml-16 text-sm">
+  <div class="w-12 my-2.5 mx-16 text-current text-center text-xs leading-6 justify-center cursor-pointer
+     hover:decoration-black hover:font-medium" *ngFor="let jet of jetMarketOptions;let i = index">
+    <div class="flex flex-row flex-wrap justify-center">
+      <img [src]="jet.imageUrl" alt="something">
+      <p> {{jet.name}}</p>
+    </div>
+  </div>
+</div> -->
+
+
+<br>
+<div class="grid space-around border-4 border-inherit">
+  <div class="rounded w-4/6 justify-self-center flex flex-nowrap m-5 text-sm">
+    <p class="w-2/12 text-center"><img src="../../assets/recommendations.png" alt="can't load"> </p>
+
+    <div class="w-2/12 text-center  py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-5.jpg"
+        alt="Picture">Clothes
+    </div>
+    <div class="w-2/12 text-center py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-6.jpg"
+        alt="Picture">Clothes
+    </div>
+    <div class="w-2/12 text-center py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-11.jpg"
+        alt="Picture">Clothes
+    </div>
+    <div class="w-2/12 text-center py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-12.jpg"
+        alt="Picture">Clothes
+    </div>
+    <div class="w-2/12 text-center py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-13.jpg"
+        alt="Picture">Clothes
+    </div>
+    <div class="w-2/12 text-center py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-14.jpg"
+        alt="Picture">Digi mehr
+    </div>
+    <div class="w-2/12 text-center py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-15.jpg"
+        alt="Picture">Clothes
+    </div>
+    <div class="flex justify-center grid justify-items-end" (click)="getPromotions()"> + </div>
+  </div>
+</div><br><br>
+<div class="thrid-body flex flex-nowrap ml-52">
+  <div class="w-1/5 text-center p-4 hover:py-3 hover:px-3 cursor-pointer ease-out duration-300"> <img
+      class="rounded-2xl border border-transparent" src="../../../../assets/second-body-1.jpg" alt="Picture"></div>
+  <div class="w-1/5 text-center p-4 hover:py-3 hover:px-3 cursor-pointer ease-out duration-300"> <img
+      class="rounded-2xl border border-transparent" src="../../../../assets/second-body-2.jpg" alt="Picture"></div>
+  <div class="w-1/5 text-center p-4 hover:py-3 hover:px-3 cursor-pointer ease-out duration-300"> <img
+      class="rounded-2xl border border-transparent" src="../../../../assets/second-body-3.jpg" alt="Picture"></div>
+  <div class="w-1/5 text-center p-4 hover:py-3 hover:px-3 cursor-pointer ease-out duration-300"> <img
+      class="rounded-2xl border border-transparent" src="../../../../assets/second-body-4.jpg" alt="Picture"></div>
+</div>
+<br>
+
+<app-best-seller-item [bestSellers]="bestSellers"></app-best-seller-item>

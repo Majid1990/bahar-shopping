@@ -8,4 +8,9 @@ export interface Product {
     color?: string,
     producedYear?: string,
     waranty?: string,
+    describtion?: string
+}
+export interface Order {
+    quantity: number,
+    product: Product
 }

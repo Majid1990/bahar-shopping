@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ITopSellingItem } from '../home/components/top-selling/model/top-selling.model';
+import { Order } from '../model/product.model';
 import { BasketService } from './components/basket/service/basket.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { BasketService } from './components/basket/service/basket.service';
 export class LayoutComponent implements OnInit {
 
   title = 'bahar-shopping';
-  purchased?: ITopSellingItem[] = []
+  purchased?: Order[] = []
   builder: any;
 
   productsVisibility: boolean = false;
