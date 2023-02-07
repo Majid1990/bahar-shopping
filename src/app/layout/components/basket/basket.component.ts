@@ -5,14 +5,10 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-basket',
   templateUrl: './basket.component.html',
-  styleUrls: ['./basket.component.scss']
+  styleUrls: ['./basket.component.scss'],
 })
 export class BasketComponent implements OnInit {
-  quantity: number = 0;
-  constructor(public basketService: BasketService, public dialog: MatDialog) { }
+  constructor(public basketService: BasketService, public dialog: MatDialog) {}
 
-  ngOnInit(): void {
-
-  }
-
+  ngOnInit(): void {}
 }

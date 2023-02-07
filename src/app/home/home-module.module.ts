@@ -6,20 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { SharedModule } from '../shared/shared.module';
 
-
-
-
 @NgModule({
-  declarations: [
-    HomeComponent,
-    GalleryComponent
-
-  ],
-  imports: [
-    CommonModule,
-    HomeModuleRoutingModule,
-    MatIconModule,
-    SharedModule
-  ]
+  declarations: [HomeComponent, GalleryComponent],
+  imports: [CommonModule, HomeModuleRoutingModule, MatIconModule, SharedModule],
 })
-export class HomeModuleModule { }
+export class HomeModuleModule {}

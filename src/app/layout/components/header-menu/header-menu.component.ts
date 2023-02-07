@@ -1,23 +1,17 @@
-import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'app-header-menu',
   templateUrl: './header-menu.component.html',
-  styleUrls: ['./header-menu.component.scss']
+  styleUrls: ['./header-menu.component.scss'],
 })
-export class HeaderMenuComponent implements OnInit {
+export class HeaderMenuComponent {
   @ViewChild(MatMenuTrigger) trigger?: MatMenuTrigger;
   productsVisibility: boolean = false;
   menuTrigger: any;
-  @HostListener('majid') nyName: any = {
+  @HostListener('majid') nyName: any = {};
 
-  }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
   showProducts() {
     this.productsVisibility = true;
   }
@@ -25,16 +19,11 @@ export class HeaderMenuComponent implements OnInit {
     this.productsVisibility = false;
   }
   getRidOfPproducts() {
-    this.hideProducts()
+    this.hideProducts();
   }
   someMethod() {
-    this.trigger?.closeMenu(); // <-- put this in your dialog open method
+    this.trigger?.closeMenu();
   }
 
-  shangeTabbar(eve: any) {
-
-  }
-  // openMyMenu(menuTrigger: MatMenuTrigger) {
-  //   menuTrigger.openMenu();
-  // }
+  shangeTabbar(eve: any) {}
 }

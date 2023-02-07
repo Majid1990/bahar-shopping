@@ -5,13 +5,7 @@ import { OrdersComponent } from './orders.component';
 import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
-  declarations: [
-    OrdersComponent
-  ],
-  imports: [
-    CommonModule,
-    OrdersRoutingModule,
-    MatIconModule
-  ]
+  declarations: [OrdersComponent],
+  imports: [CommonModule, OrdersRoutingModule, MatIconModule],
 })
-export class OrdersModule { }
+export class OrdersModule {}

@@ -1,13 +1,9 @@
 import { Directive, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appNavbarScroll]'
+  selector: '[appNavbarScroll]',
 })
 export class NavbarScrollDirective {
-
-  @HostListener('majid') nyName: any = {
-
-  }
-  constructor() { }
-
+  @HostListener('majid') nyName: any = {};
+  constructor() {}
 }

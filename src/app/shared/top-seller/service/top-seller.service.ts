@@ -7,21 +7,16 @@ import { TopSellingItems } from '../model/top-seller.data';
 import { ITopSelling } from '../model/top-seller.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TopSellerService {
-
-  constructor(private http: HttpClient) { }
-
+  constructor(private http: HttpClient) {}
 
   getTopSellingItems(): Observable<ITopSelling[]> {
-    //return  this.http.get('') 
-
-    return of(TopSellingItems)
-    //.pipe(delay(1000))
+    return of(TopSellingItems);
   }
 
   getProductDetail(id: number): Observable<Product> {
-    return of(PRODUCT_DATA.find(p => p.id === id)!)
+    return of(PRODUCT_DATA.find((p) => p.id === id)!);
   }
 }

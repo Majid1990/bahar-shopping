@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { OrdersComponent } from './orders.component';
 
 describe('OrdersComponent', () => {
@@ -8,9 +7,8 @@ describe('OrdersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OrdersComponent ]
-    })
-    .compileComponents();
+      declarations: [OrdersComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -21,5 +19,11 @@ describe('OrdersComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  describe('orderedItems', () => {
+    it('should be exist', () => {
+      expect(component.orderedItems).toBeTruthy();
+    });
   });
 });

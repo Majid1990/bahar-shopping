@@ -1,6 +1,5 @@
 <div style="text-align: end; padding-left: 10%; padding-top: 5%; background-color: rgb(255, 255, 255);">
   <div class="flex flex-row detail" style=" text-align: left;">
-
     <div style=" width: 100%; border: 1px solid rgb(246, 246, 246); background-color: rgba(239, 239, 239, 0.375); 
       width: 80%; padding: 3%; line-height: 2em;">
 
@@ -35,6 +34,10 @@
           duration-200 ease-in-out rounded-sm cursor-pointer p-1
           leading-8 hover:border-slate-900 hover:bg-blue-700 hover:text-white cursor-pointer">
         Add to order </button>
-
+      <button [routerLink]="['/top-seller']" [queryParams]="{ id: productDetail.id }" type="button"
+        (click)="backToTopSelling(productDetail)" class="text-slate-600 bg-slate-100 text-sm border border-slate-400 
+        duration-200 ease-in-out rounded-sm cursor-pointer p-1
+        leading-8 hover:border-slate-900 hover:bg-orange-900 hover:text-white cursor-pointer">
+        Back </button>
     </div>
   </div>

@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BasketComponent } from './basket.component';
 
 describe('BasketComponent', () => {
@@ -8,9 +7,8 @@ describe('BasketComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BasketComponent ]
-    })
-    .compileComponents();
+      declarations: [BasketComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

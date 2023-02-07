@@ -1,8 +1,7 @@
 <div style="background-color: rgba(237, 249, 255, 0.275);" (scroll)="shangeTabbar($event.target)">
-  <!-- (mouseover)="showProducts()" -->
+
   <div class="flex-container flex text-sm text-center w-6/12 mt-24 ">
     <a class="shrink w-64 h-14 text-black" href="#">Products</a>
-    <!-- (mouseenter)="menuTrigger.openMenu()" -->
     <a class="shrink w-64 h-14" [routerLink]="['/home']" (mouseover)="hideProducts()">Home</a>
     <a class="shrink w-64 h-14" href="#" (mouseover)="hideProducts()">Market</a>
     <a class="shrink w-80 h-14" [routerLink]="'best-seller'" (mouseover)="hideProducts()">Best seller</a>
@@ -20,7 +19,6 @@
     </button>
 
     <div>
-
       <mat-menu #animals="matMenu" class="py-4 px-3">
         <button class="iconHover" mat-menu-item [matMenuTriggerFor]="vertebrates">
           <mat-icon class="iconHover">tablet_mac</mat-icon>Phones

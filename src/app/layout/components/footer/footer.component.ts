@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
   windowScrolled = false;
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     window.addEventListener('scroll', () => {
@@ -18,5 +18,4 @@ export class FooterComponent implements OnInit {
   backToTop() {
     window.scrollTo(0, 0);
   }
-
 }

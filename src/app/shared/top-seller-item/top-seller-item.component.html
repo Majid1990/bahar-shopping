@@ -23,14 +23,12 @@
             <div> Price: <span class="text-green-900">{{item.price}}</span></div>
             <div> Available: <span class="text-green-900">{{item.availability}}</span></div>
 
-            <a [routerLink]="['top-seller-detail']" [queryParams]="{ id: item.id }" (click)="details()" class="text-slate-600 
+            <a [routerLink]="['/top-seller-detail']" [queryParams]="{ id: item.id }" (click)="details()" class="text-slate-600 
                 bg-slate-100 text-xs border border-slate-400 
                  duration-200 ease-in-out rounded-sm cursor-pointer 
                  py-1 px-2.5 leading-10 hover:border-slate-900 hover:bg-slate-700 hover:text-white">
               <button class="text-xs"> Detail </button>
             </a>
-            <!-- (click)="openDialog(item.id)" -->
-
             <div (click)="addToOrder(item)" class="text-slate-600 bg-slate-100 text-xs border border-slate-400 
                duration-200 ease-in-out rounded-sm cursor-pointer 
                leading-8 hover:border-slate-900 hover:bg-slate-700 hover:text-white">

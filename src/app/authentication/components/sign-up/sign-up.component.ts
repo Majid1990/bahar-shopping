@@ -1,27 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { SignUp } from '../../model/sign-up.model';
+import { SignUpService } from '../../service/sign-up.service';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.scss']
+  styleUrls: ['./sign-up.component.scss'],
 })
-export class SignUpComponent implements OnInit {
-
-  username: string = "";
-  password: string = "";
+export class SignUpComponent {
+  firstName: string = '';
+  lastName: string = '';
+  password: string = '';
   email: string = '';
-  show: boolean = false;
 
-  ngOnInit(): void {
-  }
+  constructor(private signUpService: SignUpService) {}
 
   submit() {
-    console.log("user name is " + this.username)
-    this.clear();
-  }
-  clear() {
-    this.username = "";
-    this.password = "";
-    this.show = true;
+    const akbar: SignUp = {
+      firstName: this.firstName,
+      lastName: this.lastName,
+      password: this.password,
+      emailAddress: this.email,
+    };
+    this.signUpService.newSignUp(akbar);
+    this.signUpService.postNewSignUp(akbar);
   }
 }

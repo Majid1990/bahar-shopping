@@ -8,25 +8,29 @@
     <form style="text-align: center;" class="example-form">
       <h4> Sign up new account</h4>
       <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Your Name</mat-label>
-        <input matInput placeholder="Enter your name" name="usename" [(ngModel)]="username">
+        <mat-label>First name</mat-label>
+        <input matInput placeholder="Write your first name" name="usename" [(ngModel)]="firstName">
+      </mat-form-field><br>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Last name</mat-label>
+        <input matInput placeholder="Write your last name" name="usename" [(ngModel)]="lastName">
       </mat-form-field><br>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Email address</mat-label>
-        <input matInput placeholder="Enter your email" value="" name="email" type="email" [(ngModel)]="email">
+        <input matInput placeholder="Write your email" value="" name="email" type="email" [(ngModel)]="email">
       </mat-form-field><br>
       <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Set a password</mat-label>
-        <input matInput placeholder="Enter your password" value="" name="password" type="password"
-          [(ngModel)]="password">
+        <mat-label>Create password</mat-label>
+        <input matInput placeholder="create password" value="" name="password" type="password" [(ngModel)]="password">
       </mat-form-field><br>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Repeat password</mat-label>
-        <input matInput placeholder="Enter your password" value="" name="password" type="password"
+        <input matInput placeholder="Write your password" value="" name="password" type="password"
           [(ngModel)]="password">
       </mat-form-field><br>
-      <button type="button" mat-raised-button color="primary" (click)="submit()"> Continue</button>
-      <!-- <span *ngIf="show"> <button type="button" mat-button color="accent">Login success !!</button></span> -->
+      <button type="button" mat-raised-button color="primary" (click)="submit()"> Register</button>
+      <div class="text-neutral-900 hover:text-green-900 hover:cursor-pointer" [routerLink]="'/authentication/login'">
+        Login</div>
     </form>
   </div>
 </div>

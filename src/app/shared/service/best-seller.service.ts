@@ -4,12 +4,14 @@ import { BEST_SELLING_DATA } from '../model/best-seller.data';
 import { BestSeller } from '../model/best-seller.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BestSellerService {
-  constructor() { }
-
+  detail: any;
   getBestSellingData(): Observable<BestSeller[]> {
-    return of(BEST_SELLING_DATA)
+    return of(BEST_SELLING_DATA);
+  }
+  getBestSellingDetail(eve: any) {
+    this.detail = eve;
   }
 }
