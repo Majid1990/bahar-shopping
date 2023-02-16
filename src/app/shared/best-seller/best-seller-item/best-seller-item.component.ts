@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { BasketService } from 'src/app/layout/components/basket/service/basket.service';
 import { BestSeller } from 'src/app/shared/model/best-seller.model';
-import { BestSellerService } from '../../service/best-seller.service';
 
 @Component({
   selector: 'app-best-seller-item',
@@ -11,15 +11,12 @@ import { BestSellerService } from '../../service/best-seller.service';
 export class BestSellerItemComponent {
   @Input() bestSellers?: BestSeller[];
 
-  constructor(
-    private basketService: BasketService,
-    private bestSellerService: BestSellerService
-  ) {}
+  constructor(private basketService: BasketService, private router: Router) {}
 
   addToOrder(eve: any) {
     this.basketService.addOrders(eve);
   }
-  showInDetail(eve: any) {
-    this.bestSellerService.getBestSellingDetail(eve);
+  showInDetail() {
+    this.router.navigate;
   }
 }

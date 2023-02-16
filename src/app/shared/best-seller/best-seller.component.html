@@ -23,23 +23,17 @@
     <div class="w-2/12 text-center py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-15.jpg"
         alt="Picture">Clothes
     </div>
-
     <div style="display: flex; justify-self: center; justify-items: center; text-align: center;"
       class="w-2/12 py-1.5 px-1.5 leading-10 border">
       <mat-icon>unfold_more</mat-icon>
     </div>
   </div>
 </div><br><br>
-<div class="thrid-body flex flex-nowrap ml-52">
-  <div class="w-1/5 text-center p-4 hover:py-3 hover:px-3 cursor-pointer ease-out duration-300"> <img
-      class="rounded-2xl border border-transparent" src="../../../../assets/second-body-1.jpg" alt="Picture"></div>
-  <div class="w-1/5 text-center p-4 hover:py-3 hover:px-3 cursor-pointer ease-out duration-300"> <img
-      class="rounded-2xl border border-transparent" src="../../../../assets/second-body-2.jpg" alt="Picture"></div>
-  <div class="w-1/5 text-center p-4 hover:py-3 hover:px-3 cursor-pointer ease-out duration-300"> <img
-      class="rounded-2xl border border-transparent" src="../../../../assets/second-body-3.jpg" alt="Picture"></div>
-  <div class="w-1/5 text-center p-4 hover:py-3 hover:px-3 cursor-pointer ease-out duration-300"> <img
-      class="rounded-2xl border border-transparent" src="../../../../assets/second-body-4.jpg" alt="Picture"></div>
+<div class="flex flex-row ml-52" *ngFor="let parcel of bestSellersParcel">
+  <div class="w-1/5 text-center p-4 hover:py-3 hover:px-3 cursor-pointer ease-out duration-300">
+    <img alt="" [routerLink]="'/best-seller/best-seller-detail'" [queryParams]="{ id: parcel.id }"
+      (click)="showInDetail()" class="rounded-2xl border border-transparent" [src]="parcel.image">
+  </div>
 </div>
 <br>
-
 <app-best-seller-item [bestSellers]="bestSellers"></app-best-seller-item>

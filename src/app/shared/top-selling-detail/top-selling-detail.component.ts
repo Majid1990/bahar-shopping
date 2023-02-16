@@ -22,6 +22,7 @@ export class TopSellingDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     this.route.queryParams.subscribe((params) => {
       this.id = +params['id'];
     });

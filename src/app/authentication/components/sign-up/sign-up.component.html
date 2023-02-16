@@ -5,31 +5,34 @@
   <div
     style="text-align: right; border: 1px solid lightgray;
         background-color: rgba(238, 238, 238, 0.208); padding-top: 30px; border: 1px solid rgba(234, 234, 234, 0.532);">
-    <form style="text-align: center;" class="example-form">
+    <form [formGroup]="myForm!" (ngSubmit)="onSubmit(myForm)" style="text-align: center;" class="example-form">
       <h4> Sign up new account</h4>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>First name</mat-label>
-        <input matInput placeholder="Write your first name" name="usename" [(ngModel)]="firstName">
+        <input matInput placeholder="Write your first name" formControlName="firstName">
       </mat-form-field><br>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Last name</mat-label>
-        <input matInput placeholder="Write your last name" name="usename" [(ngModel)]="lastName">
+        <input matInput placeholder="Write your last name" formControlName="lastName">
       </mat-form-field><br>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Email address</mat-label>
-        <input matInput placeholder="Write your email" value="" name="email" type="email" [(ngModel)]="email">
+        <input matInput placeholder="Write your email" formControlName="email">
       </mat-form-field><br>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Create password</mat-label>
-        <input matInput placeholder="create password" value="" name="password" type="password" [(ngModel)]="password">
+        <input matInput placeholder="create password" value="" formControlName="password">
+        <span *ngIf="myForm?.get('password')?.invalid && myForm?.get('password')?.touched"
+          style="color: red; font-size: x-small; padding-bottom: 15px;">At
+          least 5 characters</span>
       </mat-form-field><br>
-      <mat-form-field class="example-full-width" appearance="fill">
+      <!-- <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Repeat password</mat-label>
-        <input matInput placeholder="Write your password" value="" name="password" type="password"
-          [(ngModel)]="password">
-      </mat-form-field><br>
-      <button type="button" mat-raised-button color="primary" (click)="submit()"> Register</button>
-      <div class="text-neutral-900 hover:text-green-900 hover:cursor-pointer" [routerLink]="'/authentication/login'">
+        <input matInput placeholder="Write your password" value="" formControlName="password">
+      </mat-form-field><br> -->
+      <button [disabled]="!myForm?.valid" type="submit" mat-raised-button color="primary"> Register</button>
+      <div type="button" class="text-neutral-900 hover:text-green-900 hover:cursor-pointer"
+        [routerLink]="'/authentication/login'">
         Login</div>
     </form>
   </div>

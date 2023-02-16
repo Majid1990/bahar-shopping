@@ -18,7 +18,8 @@
                justify-around ml-3.5 border rounded-lg mt-2.5" style="width: 10%;">
 
           <div class="flex-col" style=" font-size: small; background-color:rgb(255, 255, 255)">
-            <img class="mb-3.5 h-24 rounded-sm" width="150px" [src]="item.image" alt="Can't display">
+            <img [routerLink]="['/top-seller-detail']" [queryParams]="{ id: item.id }" (click)="details()"
+              class="mb-3.5 h-24 rounded-sm" width="150px" [src]="item.image" alt="Can't display">
             <div> <span class="text-blue-900 font-normal">{{item.name }}</span></div>
             <div> Price: <span class="text-green-900">{{item.price}}</span></div>
             <div> Available: <span class="text-green-900">{{item.availability}}</span></div>

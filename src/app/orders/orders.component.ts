@@ -12,6 +12,7 @@ export class OrdersComponent implements OnInit {
   constructor(private basketService: BasketService) {}
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     this.basketService.orderedItems$.subscribe((orders) => {
       this.orderedItems = orders;
     });
