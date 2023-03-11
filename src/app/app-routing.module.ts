@@ -3,7 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'all-products',
+    loadChildren: () =>
+      import('./shared/all-products/all-products.module').then(
+        (x) => x.AllProductsModule
+      ),
+  },
+  {
     path: '',
+    loadChildren: () =>
+      import('./home/home-module.module').then((x) => x.HomeModuleModule),
+  },
+  {
+    path: 'market',
     loadChildren: () =>
       import('./home/home-module.module').then((x) => x.HomeModuleModule),
   },
@@ -52,6 +64,18 @@ const routes: Routes = [
     path: 'client-profile',
     loadChildren: () =>
       import('./client-profile/profile.module').then((x) => x.ProfileModule),
+  },
+  {
+    path: 'promotions',
+    loadChildren: () =>
+      import('./promotions/promotions.module').then((x) => x.PromotionsModule),
+  },
+  {
+    path: 'promotions-detail',
+    loadChildren: () =>
+      import('./promotions/promotions-detail/promotion-detail.module').then(
+        (x) => x.PromotionDetailModule
+      ),
   },
 ];
 

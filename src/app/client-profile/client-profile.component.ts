@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { SignUp } from '../authentication/model/sign-up.model';
 import { SignUpService } from '../authentication/service/sign-up.service';
+import { ClientProfileDialogComponent } from './client-profile-dialog/client-profile-dialog.component';
 
 @Component({
   selector: 'app-client-profile',
@@ -8,31 +10,39 @@ import { SignUpService } from '../authentication/service/sign-up.service';
   styleUrls: ['./client-profile.component.scss'],
 })
 export class ClientProfileComponent implements OnInit {
-  // picture: string = '';
   users: any[] = [];
-  clienctInfo?: any;
-  akbar?: SignUp;
-  constructor(private signUpService: SignUpService) {}
+  user?: SignUp;
+
+  constructor(private signUpService: SignUpService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     debugger;
-    this.signUpService.findCustomer('x', 'y').subscribe((obj) => {
-      debugger;
-      let property: keyof typeof obj;
-      for (property in obj) {
-        const v = obj[property];
-        this.users.push(v);
-      }
+    this.users = this.signUpService.users;
+    this.user = this.users.find(
+      (x) =>
+        x.email == this.signUpService.user?.email &&
+        x.password == this.signUpService.user?.password
+    );
+  }
+  editClientInfo() {
+    this.user;
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(ClientProfileDialogComponent, {
+      height: '600px',
+      width: '900px',
+      data: {
+        firstName: this.user?.firstName,
+        lastName: this.user?.lastName,
+        email: this.user?.email,
+        password: this.user?.password,
+      },
     });
-    debugger;
-    this.clienctInfo = this.signUpService.user;
-    this.akbar = this.users.find((x) => {
-      debugger;
-      x.email === this.clienctInfo?.email &&
-        x.password == this.clienctInfo?.password;
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+      this.user = result;
     });
-    // this.clientService.profile()?.email &&
-    // this.clientService.profile()?.firstName &&
-    // this.clientService.profile()?.lastName;
   }
 }

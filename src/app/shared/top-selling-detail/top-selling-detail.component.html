@@ -1,43 +1,45 @@
-<div style="text-align: end; padding-left: 10%; padding-top: 5%; background-color: rgb(255, 255, 255);">
-  <div class="flex flex-row detail" style=" text-align: left;">
-    <div style=" width: 100%; border: 1px solid rgb(246, 246, 246); background-color: rgba(239, 239, 239, 0.375); 
-      width: 80%; padding: 3%; line-height: 2em;">
+<div>
+  <div class="overscroll-auto" style=" height: auto; width: auto; margin: 30px;">
+    <div class="text-left">
+      <div class="container-main">
+        <div> <img class="rounded-sm" style="height:300px;" width="300px" [src]="productDetail.image"
+            alt="Can't display">
+        </div>
+        <div class="text-left bg-white-300" style="line-height: 1.5em;">
+          <div style="padding-bottom: 18px; font-size: xx-large;"> <span
+              class="text-pink-900">{{productDetail.name }}</span></div>
+          <div> <span class="text-green-900 text-lg font-serif">{{productDetail.price}}€</span></div>
+          <div *ngIf="productDetail.discount"> <span
+              class="px-1 text-center font-serif text-white rounded bg-rose-600">{{productDetail.discount}}%</span>
+          </div>
+          <div> Availabile to buy <span class="text-green-900 font-serif">{{productDetail.availability}}</span></div>
+          <div> ID <span class="text-green-900 font-serif">{{productDetail.id }}</span></div>
+          <div> Weight <span class="text-green-900 font-serif">{{productDetail.weight}}</span></div>
+          <div> Color <span class="text-green-900 font-serif">{{productDetail.color}}</span></div>
+          <div> produced year <span class="text-green-900 font-serif">{{productDetail.producedYear}}</span></div>
+          <div *ngIf="productDetail.waranty"> <span class="text-gray-600 font-serif text-md">Guarantee of product
+              authenticity and health</span>
+            <mat-icon class="text-gray-800">verified_user</mat-icon>
+          </div>
+          <br>
+          <button (click)="addToOrder(productDetail)" type="button" class="text-slate-600 bg-slate-100 text-sm border border-slate-400 
+                     duration-200 ease-in-out rounded-sm cursor-pointer p-1
+                     leading-8 hover:border-slate-900 hover:bg-green-700 hover:text-white cursor-pointer">
+            Add to order </button>
+          <button [routerLink]="'/top-seller'" [queryParams]="{ id: productDetail.id }" (click)="back()" type="button"
+            class="text-slate-600 bg-slate-100 text-sm border border-slate-400 
+                     duration-200 ease-in-out rounded-sm cursor-pointer p-1 ml-1
+                     leading-8 hover:border-slate-900 hover:bg-rose-700 hover:text-white"> Back </button>
+        </div>
+        <div></div>
+        <div style="padding-left: 150px;" class="text-gray-600 bg-gray-50">
+          <h1>Description</h1>
+          <div class="font-serif">{{productDetail.describtion}}
+          </div>
+        </div>
 
-      <div class="grid grid-cols-2 gap-4">
-        <span class="text-green-900 text-4xl">{{productDetail.name }}</span>
-
-        <div> <img class="rounded-sm" style="height:150px;" [src]="productDetail.image" alt="Can't display"></div>
       </div>
-      <div style="width: 200px;" class="grid grid-cols-2">
-        <div> Price:</div>
-        <div><span class="text-green-900">{{productDetail.price}}</span></div>
-        <div> Availabile:</div>
-        <div> <span class="text-green-900">{{productDetail.availability}}</span></div>
-        <div> ID:</div>
-        <div> <span class="text-green-900">{{productDetail.id}}</span></div>
-
-        <div> Weight:</div>
-        <div> <span class="text-green-900">{{productDetail.weight}}</span></div>
-
-        <div> Color:</div>
-        <div> <span class="text-green-900">{{productDetail.color}}</span></div>
-
-        <div> Produced year:</div>
-        <div> <span class="text-green-900">{{productDetail.producedYear}}</span></div>
-
-        <div> Waranty:</div>
-        <div> <span class="text-green-900">{{productDetail.waranty}}</span></div>
-
-      </div>
-      <br>
-      <button type="button" (click)="addToOrder(productDetail)" class="text-slate-600 bg-slate-100 text-sm border border-slate-400 
-          duration-200 ease-in-out rounded-sm cursor-pointer p-1
-          leading-8 hover:border-slate-900 hover:bg-blue-700 hover:text-white cursor-pointer">
-        Add to order </button>
-      <button [routerLink]="['/top-seller']" [queryParams]="{ id: productDetail.id }" type="button"
-        (click)="backToTopSelling(productDetail)" class="text-slate-600 bg-slate-100 text-sm border border-slate-400 
-        duration-200 ease-in-out rounded-sm cursor-pointer p-1
-        leading-8 hover:border-slate-900 hover:bg-orange-900 hover:text-white cursor-pointer">
-        Back </button>
     </div>
+    <hr>
   </div>
+</div>

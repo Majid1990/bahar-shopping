@@ -1,0 +1,16 @@
+<div class="text-right border pt-8 mb-40 bg-gray-100">
+  <form [formGroup]="myForm!" (ngSubmit)="onSubmit(myForm)" style="text-align: center;" class="example-form">
+    <h4> Forgat password? </h4>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Enter your email" name="usename" formControlName="userName">
+    </mat-form-field><br>
+    <button class="bg-blue-700 text-white hover:bg-blue-800" type="submit" mat-raised-button> Recover </button>
+    <div style="margin-top: 30px">
+      <div class="text-xs">Don't have an account?!</div>
+      <button class="text-white mt-2 cursor-pointer bg-gray-500 hover:bg-blue-700"
+        [routerLink]="'/authentication/sign-up'" type="button" mat-button>
+        Register now </button>
+    </div>
+  </form>
+</div>

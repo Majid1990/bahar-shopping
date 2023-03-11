@@ -1,15 +1,21 @@
 <div>
-  <h1 style="text-align: center;" *ngIf="orderedItems.length >= 1"> Your orders</h1>
-
+  <h1 class="text-center border-t border-inherit pt-2" *ngIf="orderedItems.length >= 1"> Your orders</h1>
+  <div *ngIf="orderedItems.length >= 2 ">
+    <button (click)=" openDialog()"
+      class="text-left positioning text-white p-3 border border-radius bg-green-700 hover:bg-green-900" type="button">
+      Calculate items togther </button>
+  </div>
   <div *ngFor="let item of orderedItems" style="overflow: auto; height: auto; width: auto; margin: 30px;">
     <div style="text-align: left;">
       <div class="container-main">
         <div> <img class="rounded-sm" style="height:300px;" width="300px" [src]="item?.product?.image"
             alt="Can't display"></div>
         <div style="text-align: left; line-height: 1.5em;">
-          <div style="padding-bottom: 18px; font-size: xx-large;"> <span
+          <div style="padding-bottom: 18px; font-size: x-large;"> <span
               class="text-pink-900">{{item?.product?.name }}</span></div>
           <div> Price: <span class="text-green-900">{{item?.product?.price}}</span></div>
+          <div *ngIf="item.product.discount"> Discount: <span
+              class="text-rose-700 font-serif">{{item?.product?.discount}}%</span></div>
           <div> Availabile: <span class="text-green-900">{{item?.product?.availability}}</span></div>
           <div> ID: <span class="text-green-900">{{item?.product?.id }}</span></div>
           <div> Weight: <span class="text-green-900">{{item?.product?.weight}}</span></div>
@@ -22,11 +28,13 @@
             <span style="padding-top: 15px; padding-left: 5px;" class="mt-1 ml-1">
               <mat-icon class="increment" (click)="addItemQuantity(item.product.id)"><abbr title="Add item"> add_box
                 </abbr> </mat-icon>
-              <mat-icon class="decrement" (click)="removeItemQuantity(item.product.id)"><abbr title="Delete item">
+              <mat-icon class="decrement" (click)="removeItemQuantity(item.product.id)"><abbr title="Reduce item">
                   remove_circle </abbr>
               </mat-icon>
             </span>
           </div>
+          <div>Total price: <span class="text-rose-900">{{item.quantity * +item.product.price | number : '1.2-2'}}
+              €</span></div>
           <br>
           <button type="button" class="text-slate-600 bg-slate-100 text-sm border border-slate-400 
                  duration-200 ease-in-out rounded-sm cursor-pointer p-1
@@ -37,19 +45,18 @@
                  leading-8 hover:border-slate-900 hover:bg-rose-700 hover:text-white"> Cancel Item</button>
         </div>
         <div></div>
-        <div style="padding-left: 150px;" class="text-black">
-          <h1>About this item:</h1>
+        <div style="padding-left: 150px;" class="text-black bg-gray-50">
+          <h1>Description</h1>
           <div>{{item.product.describtion}}
           </div>
         </div>
-
       </div>
     </div>
     <hr>
   </div>
 </div>
 <div style="height: 300px;" *ngIf="orderedItems.length < 1" class="text-center noOrders">
-  <h1 style="text-align: center; color: red;"> You have no orders yet</h1>
+  <h1 class="text-center text-rose-600"> You have no orders yet</h1>
   <mat-icon style="font-size: 50px; text-align: center;"
     class="hover:text-gray-900 text-gray-600 cursor-pointer hover:duration-300 ease-in-out hover:text-blue-800">
     shopping_cart

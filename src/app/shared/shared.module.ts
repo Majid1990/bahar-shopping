@@ -14,6 +14,10 @@ import { TopSellerItemComponent } from './top-seller-item/top-seller-item.compon
 import { BestSellerComponent } from './best-seller/best-seller.component';
 import { BestSellerItemComponent } from './best-seller/best-seller-item/best-seller-item.component';
 import { BestSellerDetailComponent } from './best-seller/best-seller-detail/best-seller-detail.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,11 @@ import { BestSellerDetailComponent } from './best-seller/best-seller-detail/best
     RouterModule,
     MatButtonModule,
     MatSnackBarModule,
+    LayoutModule,
+    MatMenuModule,
+    MatListModule,
+    MatTableModule,
+    MatInputModule,
   ],
   exports: [
     SharedComponent,
@@ -48,6 +57,9 @@ import { BestSellerDetailComponent } from './best-seller/best-seller-detail/best
     RouterModule,
     MatButtonModule,
     MatSnackBarModule,
+    MatTableModule,
+    MatListModule,
+    MatMenuModule,
   ],
 })
 export class SharedModule {}

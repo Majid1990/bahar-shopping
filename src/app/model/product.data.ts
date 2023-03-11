@@ -13,7 +13,7 @@ export const PRODUCT_DATA: Product[] = [
     waranty: '2 years',
   },
   {
-    image: '../../../assets/Top-sellers/top-sellers-book/book-2.jpg',
+    image: '../../assets/Top-sellers/top-sellers-book/Book-2.jpg',
     name: 'book 2',
     price: '112',
     availability: 69,
@@ -21,7 +21,7 @@ export const PRODUCT_DATA: Product[] = [
     weight: '200g',
     color: 'red',
     producedYear: '2021',
-    waranty: '2 years',
+    waranty: '3 years',
   },
   {
     image: '../../../assets/Top-sellers/top-sellers-book/book-3.jpg',

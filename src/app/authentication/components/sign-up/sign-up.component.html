@@ -26,14 +26,12 @@
           style="color: red; font-size: x-small; padding-bottom: 15px;">At
           least 5 characters</span>
       </mat-form-field><br>
-      <!-- <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Repeat password</mat-label>
-        <input matInput placeholder="Write your password" value="" formControlName="password">
-      </mat-form-field><br> -->
-      <button [disabled]="!myForm?.valid" type="submit" mat-raised-button color="primary"> Register</button>
-      <div type="button" class="text-neutral-900 hover:text-green-900 hover:cursor-pointer"
-        [routerLink]="'/authentication/login'">
-        Login</div>
+      <button [routerLink]="'/authentication/login'" (click)="onSubmit(myForm)" type="submit" mat-raised-button
+        color="primary"> Register </button>
+      <div class="text-xs text-slate-500 mt-2">Already have an account?</div>
+      <button type="button" [routerLink]="'/authentication/login'"
+        class="rounded hover:text-white hover:cursor-pointer p-3 text-white mt-2 bg-gray-500 hover:bg-blue-700">
+        Login now</button>
     </form>
   </div>
 </div>

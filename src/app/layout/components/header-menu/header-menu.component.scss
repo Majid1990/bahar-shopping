@@ -29,14 +29,6 @@ a:hover {
   color: black;
 }
 
-mat-menu:hover>mat-icon {
-  color: red;
-}
-
-.iconHover:hover {
-  color: red;
-}
-
-.iconHover:hover>mat-icon {
-  color: red;
+.material-icons {
+  font-size: medium;
 }

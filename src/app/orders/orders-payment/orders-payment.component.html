@@ -1,0 +1,63 @@
+<div>
+  <span class="text-white close bg-rose-600 text-sm border border-slate-400 
+  duration-200 ease-in-out rounded-sm cursor-pointer
+  leading-8 hover:border-rose-900 hover:bg-rose-700 hover:text-white cursor-pointer" type="button" mat-button
+    (click)="closeDialog()">
+    <mat-icon>close</mat-icon>
+  </span>
+  <div class="payment">
+    <div>Discount: <span class="text-rose-600">-10%</span></div>
+    <div>Tax: <span class="text-rose-600">+5%</span></div>
+    <div>Off: </div>
+    <div>Postage & Packing: <span class="text-rose-600">10€</span></div>
+    <span class="text-black"> Total amount: </span><span
+      class="text-rose-900 text-lg">{{totallPayment | number : '1.0-2'}}€
+    </span>
+    <br>
+    <button type="button" class="text-slate-600 bg-slate-100 text-sm border border-slate-400 
+    duration-200 ease-in-out rounded-sm cursor-pointer p-1
+    leading-8 hover:border-slate-900 hover:bg-green-700 hover:text-white cursor-pointer">
+      Pay all now </button>
+    <button class="text-slate-600 bg-slate-100 text-sm border border-slate-400  
+     duration-200 ease-in-out rounded-sm cursor-pointer p-1
+     leading-8 hover:border-rose-900 hover:bg-rose-600 hover:text-white cursor-pointer" type="button"
+      (click)="closeDialog()">Back
+    </button>
+  </div>
+  <div *ngFor="let item of orderedItems" style="overflow: auto; height: auto; width: auto; margin: 30px;">
+    <div style="text-align: left;">
+      <div class="container-main">
+        <div class="Item" style="text-align: left; line-height: 1.5em;">
+          <div class="mt-2" style="padding-bottom: 17px; font-size: xx-large;"> <span
+              class="text-pink-900">{{item?.product?.name }}</span></div>
+          <div> Price: <span class="text-green-900">{{item?.product?.price}}</span></div>
+          <div> ID: <span class="text-green-900">{{item?.product?.id }}</span></div>
+          <div> Weight: <span class="text-green-900">{{item?.product?.weight}}</span></div>
+          <div> Color: <span class="text-green-900">{{item?.product?.color}}</span></div>
+          <div> produced year: <span class="text-green-900">{{item?.product?.producedYear}}</span></div>
+          <div> Waranty: <span class="text-green-900">{{item?.product?.waranty}}</span></div>
+          <div> Ordered quantity: <span
+              style="border: 1px solid; padding: 1px 5px; border-radius: 0.1em; background-color: white;"
+              class="text-rose-600 text-xl">{{item?.quantity}}</span>
+            <span style="padding-top: 15px; padding-left: 5px;" class="mt-1 ml-1">
+              <mat-icon class="increment" (click)="addItemQuantity(item.product.id)"><abbr title="Add item"> add_box
+                </abbr> </mat-icon>
+              <mat-icon class="decrement" (click)="removeItemQuantity(item.product.id)"><abbr title="Reduce item">
+                  remove_circle </abbr>
+              </mat-icon>
+            </span>
+          </div>
+          <div>Total price for {{item.quantity}} items: <span
+              class="text-rose-900">{{item.quantity * +item.product.price | number : '1.0-2'}} €</span></div>
+          <br>
+          <button type="button" (click)="cancelItem(item.product.id)" class="text-slate-600 bg-slate-100 text-sm border border-slate-400 
+                 duration-200 ease-in-out rounded-sm cursor-pointer p-1 ml-1
+                 leading-8 hover:border-slate-900 hover:bg-rose-700 hover:text-white"> Cancel Item</button>
+        </div>
+        <div class="imageDiv"> <img class="rounded-sm" style="height:55%; padding-top: 8%;" width="25%"
+            [src]="item?.product?.image" alt="Can't display"></div>
+      </div>
+    </div>
+    <hr width="50%">
+  </div>
+</div>

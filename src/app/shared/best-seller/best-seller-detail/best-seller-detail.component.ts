@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { BasketService } from 'src/app/layout/components/basket/service/basket.service';
 import { Order, Product } from 'src/app/model/product.model';
+import { OrderConfirmNotificationComponent } from 'src/app/orders/order-confirm-notification/order-confirm-notification.component';
 import { BestSellerService } from '../../service/best-seller.service';
 
 @Component({
@@ -12,11 +14,13 @@ import { BestSellerService } from '../../service/best-seller.service';
 export class BestSellerDetailComponent implements OnInit {
   itemInfo: any;
   id: any;
+  durationInSeconds = 2;
   constructor(
     private basketService: BasketService,
     private bestSellerService: BestSellerService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -25,14 +29,39 @@ export class BestSellerDetailComponent implements OnInit {
       this.id = +params['id'];
     });
 
+    this.bestSellerService
+      .getBestSellingParcelDetail(this.id)
+      .subscribe((x) => {
+        if (this.id === x?.id) {
+          this.itemInfo = x;
+        }
+      });
     this.bestSellerService.getBestSellingDetail(this.id).subscribe((x) => {
-      this.itemInfo = x;
+      if (this.id === x?.id) {
+        this.itemInfo = x;
+      }
+    });
+    this.bestSellerService.BestSellerClothesDetail(this.id).subscribe((x) => {
+      if (this.id === x?.id) {
+        this.itemInfo = x;
+      }
     });
   }
   addToOrder(itemInfo: Product) {
     this.basketService.addOrders(itemInfo);
+    this.openSnackBar();
   }
   cancelItem(id: number) {
     this.basketService.removeOrder(id);
+  }
+  back() {
+    this.router.navigate;
+  }
+  private openSnackBar() {
+    debugger;
+    this._snackBar.openFromComponent(OrderConfirmNotificationComponent, {
+      duration: this.durationInSeconds * 1000,
+      panelClass: ['blue-snackbar'],
+    });
   }
 }

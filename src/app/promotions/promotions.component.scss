@@ -1,0 +1,18 @@
+mat-form-field {
+  margin-right: 12px;
+  background-color: green;
+}
+
+mat-dialog-container {
+  background: green !important;
+}
+
+::ng-deep .warning {
+  background: 'yellow';
+}
+
+mat-icon {
+  font-size: large;
+  position: relative;
+  top: 3px;
+}

@@ -1,5 +1,7 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
-import { MatMenuTrigger } from '@angular/material/menu';
+import { Component, HostListener } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { AllProductsComponent } from 'src/app/shared/all-products/all-products.component';
 
 @Component({
   selector: 'app-header-menu',
@@ -7,13 +9,13 @@ import { MatMenuTrigger } from '@angular/material/menu';
   styleUrls: ['./header-menu.component.scss'],
 })
 export class HeaderMenuComponent {
-  @ViewChild(MatMenuTrigger) trigger?: MatMenuTrigger;
   productsVisibility: boolean = false;
   menuTrigger: any;
   @HostListener('majid') nyName: any = {};
 
+  constructor(private router: Router, private matDialog: MatDialog) {}
   showProducts() {
-    this.productsVisibility = true;
+    this.router.navigate;
   }
   hideProducts() {
     this.productsVisibility = false;
@@ -21,9 +23,10 @@ export class HeaderMenuComponent {
   getRidOfPproducts() {
     this.hideProducts();
   }
-  someMethod() {
-    this.trigger?.closeMenu();
+  close() {
+    let dialogRef = this.matDialog.open(AllProductsComponent);
+    dialogRef.close();
   }
 
-  shangeTabbar(eve: any) {}
+  changeTabbar(eve: any) {}
 }

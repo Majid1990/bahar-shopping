@@ -1,39 +1,45 @@
-<div class="grid space-around border-4 border-inherit">
-  <div class="rounded w-11/12 justify-self-center flex flex-nowrap m-5 text-sm">
-    <p class="w-2/12 text-center"><img src="../../assets/recommendations.png" alt="can't load"> </p>
-
-    <div class="w-2/12 text-center  py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-5.jpg"
-        alt="Picture">Clothes
+<div class="grid space-around border-inherit">
+  <div
+    class="rounded w-11/12 border-y-8 border-x-2 border-rose-400 p-5 justify-self-center flex flex-nowrap m-5 text-sm">
+    <div class="text-end flex items-center">
+      <button type="button">
+        <span class="border pt-6 pb-2 pl-2 mr-12 hover:border-slate-500 hover:bg-slate-200 rounded bg-slate-100">
+          <mat-icon class="text-slate-500 hover:text-black">arrow_back_ios</mat-icon>
+        </span>
+      </button>
     </div>
-    <div class="w-2/12 text-center py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-6.jpg"
-        alt="Picture">Clothes
+    <div class="flex justify-center w-1/5 border p-5 regal-blue border-inherit text-center
+                 hover:border-rose-600 3xl" *ngFor="let item of bestSellerClothes; let i = index">
+      <div (click)="showInDetail()" [queryParams]="{ id: item.id }" [routerLink]="'/best-seller/best-seller-detail'"
+        class="flex flex-wrap flex-col cursor-pointer content-around">
+        <img [src]="item.image" width="150px" style="height: 120px" alt="picture">
+        <br>
+        <div class="content-end justify-center">
+          <p class="text-sky-700"> {{item.name}} </p>
+          <p><span class="text-lime-900"> {{item.price}}€ </span> </p>
+          <p *ngIf="item.discount"><span class="text-white px-2 text-white rounded bg-green-600">
+              {{item.discount}}%</span></p>
+          <br>
+        </div>
+      </div>
     </div>
-    <div class="w-2/12 text-center py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-11.jpg"
-        alt="Picture">Clothes
-    </div>
-    <div class="w-2/12 text-center py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-12.jpg"
-        alt="Picture">Clothes
-    </div>
-    <div class="w-2/12 text-center py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-13.jpg"
-        alt="Picture">Clothes
-    </div>
-    <div class="w-2/12 text-center py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-14.jpg"
-        alt="Picture">Digi mehr
-    </div>
-    <div class="w-2/12 text-center py-1.5 px-1.5 leading-10 border"> <img src="../../../../assets/body-15.jpg"
-        alt="Picture">Clothes
-    </div>
-    <div style="display: flex; justify-self: center; justify-items: center; text-align: center;"
-      class="w-2/12 py-1.5 px-1.5 leading-10 border">
-      <mat-icon>unfold_more</mat-icon>
+    <div style="flex: 20px; text-align: end; display: flex; align-items: center;">
+      <button type="button">
+        <span class="border pt-6 pb-2 px-1 ml-12 hover:border-slate-500 hover:bg-slate-200 rounded bg-slate-100">
+          <mat-icon class="text-slate-500 hover:text-black">arrow_forward_ios</mat-icon>
+        </span>
+      </button>
     </div>
   </div>
 </div><br><br>
-<div class="flex flex-row ml-52" *ngFor="let parcel of bestSellersParcel">
-  <div class="w-1/5 text-center p-4 hover:py-3 hover:px-3 cursor-pointer ease-out duration-300">
-    <img alt="" [routerLink]="'/best-seller/best-seller-detail'" [queryParams]="{ id: parcel.id }"
-      (click)="showInDetail()" class="rounded-2xl border border-transparent" [src]="parcel.image">
+<div class="flex">
+  <div class="" *ngFor="let parcel of bestSellersParcel">
+    <div class="text-center p-4 ml-20 cursor-pointer ease-out duration-300">
+      <img alt="" [routerLink]="'/best-seller/best-seller-detail'" [queryParams]="{ id: parcel.id }"
+        (click)="showInDetail()" class="rounded-2xl border w-60 border-transparent" [src]="parcel.image">
+    </div>
   </div>
 </div>
+
 <br>
 <app-best-seller-item [bestSellers]="bestSellers"></app-best-seller-item>

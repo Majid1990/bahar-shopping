@@ -1,8 +1,24 @@
-<div class="profile">
-  <div>Name: {{akbar?.firstName}}</div>
-  <div>Family name: {{akbar?.lastName}}</div>
-  <!-- <div>Address: {{akbar?.address}} </div> -->
-  <div>Email: {{akbar?.email}} </div>
-  <!-- <div>Contact number: {{akbar?.contact}} </div> -->
-  <!-- <div>Picture: {{clienctInfo.name}} </div> -->
+<div class="flex" *ngIf="user?.email">
+  <div class="profile">
+    <div>Name: <span> {{user?.firstName}}</span></div>
+    <div>Last name: <span> {{user?.lastName}}</span></div>
+    <div>Email: <span> {{user?.email}}</span> </div>
+    <div>Password: <span> {{user?.password}}</span> </div>
+    <div>Address: <span> {{user?.address}}</span> </div>
+    <div>Phone number: <span> {{user?.phoneNumber}}</span> </div>
+    <div>Work address: <span> {{user?.workAddress}}</span> </div>
+    <br>
+    <ol>
+      <li>
+        <button type="button" class="bg-blue-600 p-2 text-center text-white rounded hover:bg-blue-900" mat-raised-button
+          (click)="openDialog()"> Edit </button>
+      </li>
+    </ol>
+  </div>
+</div>
+<div class="text-center border p-16 text-black size-lg bg-gray-200" *ngIf="!user">
+  <div class="p-8">You are not loged in yet!</div>
+  <button type="button" [routerLink]="['../authentication/login']"
+    class="bg-blue-500 p-2 text-white rounded hover:bg-blue-900">Login
+    now</button>
 </div>

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BasketService } from 'src/app/layout/components/basket/service/basket.service';
 import { Product } from 'src/app/model/product.model';
+import { OrderConfirmNotificationComponent } from 'src/app/orders/order-confirm-notification/order-confirm-notification.component';
 import { ITopSellingItem } from '../top-seller/model/top-seller.model';
 import { TopSellerService } from '../top-seller/service/top-seller.service';
 
@@ -12,13 +14,15 @@ import { TopSellerService } from '../top-seller/service/top-seller.service';
 })
 export class TopSellingDetailComponent implements OnInit {
   itemData: ITopSellingItem[] = [];
-  productDetail: Product = { id: 0 };
+  productDetail: Product = { id: 0, price: '' };
   id: number = 0;
+  durationInSeconds = 2;
   constructor(
     private topSellerService: TopSellerService,
     private basketService: BasketService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -33,8 +37,14 @@ export class TopSellingDetailComponent implements OnInit {
   }
   addToOrder(data: any) {
     this.basketService.addOrders(data);
+    this.openSnackBar();
   }
-  backToTopSelling(data: any) {
+  back() {
     this.router.navigate;
+  }
+  private openSnackBar() {
+    this._snackBar.openFromComponent(OrderConfirmNotificationComponent, {
+      duration: this.durationInSeconds * 1000,
+    });
   }
 }

@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { BasketService } from 'src/app/layout/components/basket/service/basket.service';
+import { OrderConfirmNotificationComponent } from 'src/app/orders/order-confirm-notification/order-confirm-notification.component';
 import {
   ITopSelling,
   ITopSellingItem,
@@ -18,6 +19,7 @@ export class TopSellerItemComponent implements OnInit {
   @Input() bestSellingProducts?: ITopSelling;
   filteredBestSellingProducts?: ITopSellingItem[] = [];
   quantityCounter: number = 0;
+  durationInSeconds = 2;
 
   @ViewChild('f') prop?: NgForm;
   constructor(
@@ -51,9 +53,16 @@ export class TopSellerItemComponent implements OnInit {
 
   addToOrder(data: ITopSellingItem) {
     this.basketService.addOrders(data);
+    this.openSnackBar();
   }
-
   details() {
     this.router.navigate;
+  }
+  private openSnackBar() {
+    debugger;
+    this._snackBar.openFromComponent(OrderConfirmNotificationComponent, {
+      duration: this.durationInSeconds * 1000,
+      panelClass: ['warning'],
+    });
   }
 }

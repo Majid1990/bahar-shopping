@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, mergeMap, Observable } from 'rxjs';
 import { SignUp } from '../model/sign-up.model';
 
 @Injectable({
@@ -9,14 +8,15 @@ import { SignUp } from '../model/sign-up.model';
 export class SignUpService {
   constructor(private http: HttpClient) {}
 
-  users: SignUp[] = [];
+  users: any[] = [];
   data: any = [];
-  user?: any;
+  user?: SignUp;
 
   newSignUp(eve: SignUp) {
     this.users.push(eve);
   }
   postNewSignUp(data?: SignUp) {
+    debugger;
     this.http
       .post(
         'https://bahar-shopping-default-rtdb.europe-west1.firebasedatabase.app/posts.json',
@@ -24,16 +24,30 @@ export class SignUpService {
       )
       .subscribe();
   }
-  findCustomer(email: string, password: string) {
+
+  editClientInfo(id: any, value?: SignUp) {
+    return this.http.put(
+      'https://bahar-shopping-default-rtdb.europe-west1.firebasedatabase.app/posts/' +
+        id +
+        '.json',
+      value
+    );
+  }
+
+  findCustomer() {
     return this.http.get(
       'https://bahar-shopping-default-rtdb.europe-west1.firebasedatabase.app/posts.json'
     );
   }
-  profile(userName?: string, password?: string) {
+  profile(userName: string, password: string) {
     debugger;
-    this.user = { userName, password };
-    // this.user = this.users.find(
-    //   (x) => x.email === userName && x.password === password
-    // );
+    this.user = { email: userName, password: password };
+    this.findCustomer().subscribe((obj) => {
+      let property: keyof typeof obj;
+      for (property in obj) {
+        const user = obj[property];
+        this.users.push(user);
+      }
+    });
   }
 }

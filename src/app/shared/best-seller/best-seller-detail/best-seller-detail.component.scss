@@ -2,13 +2,13 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 10px;
-  background-color: #f4f4f4;
   padding: 10px;
   border: 1px solid rgba(243, 243, 243, 0.547);
+  box-shadow: 2px 10px 5px 10px rgb(240, 240, 240);
 }
 
 .container-main>div {
-  text-align: center;
   font-size: 17px;
   padding: 30px;
+  font-family: Times, serif;
 }

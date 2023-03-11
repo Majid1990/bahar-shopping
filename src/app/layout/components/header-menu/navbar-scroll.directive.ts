@@ -5,5 +5,4 @@ import { Directive, HostListener } from '@angular/core';
 })
 export class NavbarScrollDirective {
   @HostListener('majid') nyName: any = {};
-  constructor() {}
 }

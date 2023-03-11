@@ -1,35 +1,39 @@
 <div>
-  <div style="overflow: auto; height: auto; width: auto; margin: 30px;">
-    <div style="text-align: left;">
+  <div class="overscroll-auto" style=" height: auto; width: auto; margin: 30px;">
+    <div class="text-left">
       <div class="container-main">
         <div> <img class="rounded-sm" style="height:300px;" width="300px" [src]="itemInfo?.image" alt="Can't display">
         </div>
-        <div style="text-align: left; line-height: 1.5em;">
+        <div class="text-left bg-white-300" style="line-height: 1.5em;">
           <div style="padding-bottom: 18px; font-size: xx-large;"> <span
               class="text-pink-900">{{itemInfo?.name }}</span></div>
-          <div> Price: <span class="text-green-900">{{itemInfo?.price}}</span></div>
-          <div> Availabile: <span class="text-green-900">{{itemInfo?.availability}}</span></div>
-          <div> ID: <span class="text-green-900">{{itemInfo.id }}</span></div>
-          <div> Weight: <span class="text-green-900">{{itemInfo?.weight}}</span></div>
-          <div> Color: <span class="text-green-900">{{itemInfo?.color}}</span></div>
-          <div> produced year: <span class="text-green-900">{{itemInfo?.producedYear}}</span></div>
-          <div> Waranty: <span class="text-green-900">{{itemInfo?.waranty}}</span></div>
+          <div> <span class="text-green-900 font-serif">{{itemInfo?.price}}€</span></div>
+          <div> <span class="px-1 text-center font-serif text-white rounded bg-rose-600">{{itemInfo?.discount}}%</span>
+          </div>
+          <div> Availabile to buy <span class="text-green-900 font-serif">{{itemInfo?.availability}}</span></div>
+          <div> Weight <span class="text-green-900 font-serif">{{itemInfo?.weight}}</span></div>
+          <div> Color <span class="text-green-900 font-serif">{{itemInfo?.color}}</span></div>
+          <div> produced year <span class="text-green-900 font-serif">{{itemInfo?.producedYear}}</span></div>
+          <div *ngIf="itemInfo.waranty"> <span class="text-gray-600 font-serif text-md">Guarantee of product
+              authenticity and health</span>
+            <mat-icon class="text-gray-800">verified_user</mat-icon>
+          </div>
           <br>
           <button (click)="addToOrder(itemInfo)" type="button" class="text-slate-600 bg-slate-100 text-sm border border-slate-400 
                    duration-200 ease-in-out rounded-sm cursor-pointer p-1
                    leading-8 hover:border-slate-900 hover:bg-green-700 hover:text-white cursor-pointer">
             Add to order </button>
-          <button type="button" class="text-slate-600 bg-slate-100 text-sm border border-slate-400 
+          <button [routerLink]="'/best-seller'" [queryParams]="{ id: itemInfo.id }" (click)="back()" type="button"
+            class="text-slate-600 bg-slate-100 text-sm border border-slate-400 
                    duration-200 ease-in-out rounded-sm cursor-pointer p-1 ml-1
                    leading-8 hover:border-slate-900 hover:bg-rose-700 hover:text-white"> Back </button>
         </div>
         <div></div>
-        <div style="padding-left: 150px;" class="text-black">
-          <h1>About this item:</h1>
-          <div>{{itemInfo?.describtion}}
+        <div style="padding-left: 150px;" class="text-gray-600 bg-gray-50">
+          <h1>Description</h1>
+          <div class="font-serif">{{itemInfo?.describtion}}
           </div>
         </div>
-
       </div>
     </div>
     <hr>

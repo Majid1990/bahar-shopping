@@ -1,0 +1,31 @@
+<div class="p-2.5 w-full flex flex-wrap text-sm">
+  <div [queryParams]="{ id: item.id }" [routerLink]="'/promotions-detail'" class="flex justify-center cursor-pointer w-1/5 border p-5 h-96 regal-blue border-inherit hover:shadow-2xl text-center
+                 hover:border-slate-500 3xl" *ngFor="let item of promotionsProducts; let i = index">
+    <div class=" flex-col content-around">
+      <img [src]="item.image" width="120px" style="height: 120px" alt="picture">
+      <br>
+      <span>
+        <mat-icon class="text-yellow-500">star</mat-icon>
+        <mat-icon class="text-yellow-500">star</mat-icon>
+        <mat-icon class="text-yellow-500">star</mat-icon>
+        <mat-icon class="text-yellow-500">star_half</mat-icon>
+        <mat-icon class="text-green-700">assignment_turned_in</mat-icon>
+      </span>
+      <div class="content-end justify-center">
+        <p class="text-sky-700"><span class="text-black"></span> {{item.name}} </p>
+        <p><span class="text-lime-900 text-lg font-mono">{{item.price}}€</span> </p>
+        <p *ngIf="item.discount"><span class="text-lime-900"><span
+              class="px-2 text-white rounded bg-rose-600">{{item.discount}}% off</span>
+          </span></p>
+        <p *ngIf="item.availability" title="Availability" class="text-sky-700">
+          {{item.availability}}<mat-icon>event_available</mat-icon>
+        </p>
+        <p class="text-sky-700"> {{item.shortDescribtion}} </p>
+        <div *ngIf="item.freeDelivery" style="position: relative; top: 50px; right: 90%;"> <span
+            class="text-white font-serif text-xs py-2 px-1 rounded-full bg-green-600">Free
+            <mat-icon class="bg-white-100"> local_shipping</mat-icon></span></div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>

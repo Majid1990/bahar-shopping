@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BasketService } from './service/basket.service';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -7,8 +7,6 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './basket.component.html',
   styleUrls: ['./basket.component.scss'],
 })
-export class BasketComponent implements OnInit {
+export class BasketComponent {
   constructor(public basketService: BasketService, public dialog: MatDialog) {}
-
-  ngOnInit(): void {}
 }

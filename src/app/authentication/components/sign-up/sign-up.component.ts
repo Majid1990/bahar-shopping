@@ -5,7 +5,10 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { delay } from 'rxjs';
 import { SignUpService } from '../../service/sign-up.service';
+import { NewSignupNotificationComponent } from './new-signup-notification/new-signup-notification.component';
 
 @Component({
   selector: 'app-sign-up',
@@ -14,8 +17,13 @@ import { SignUpService } from '../../service/sign-up.service';
 })
 export class SignUpComponent implements OnInit {
   myForm?: FormGroup;
+  durationInSeconds = 2;
 
-  constructor(private signUpService: SignUpService, private fb: FormBuilder) {}
+  constructor(
+    private signUpService: SignUpService,
+    private fb: FormBuilder,
+    private _snackBar: MatSnackBar
+  ) {}
   ngOnInit(): void {
     window.scrollTo(0, 0);
     this.myForm = this.fb.group({
@@ -30,11 +38,20 @@ export class SignUpComponent implements OnInit {
   }
 
   onSubmit(form?: FormGroup) {
+    debugger;
     this.myForm?.get('firstName')?.value;
     this.myForm?.get('lastName')?.value;
     this.myForm?.get('email')?.value;
     this.myForm?.get('password')?.value;
     this.signUpService.postNewSignUp(form?.value);
     this.myForm?.reset();
+    this.openSnackBarCancelOrder();
+    delay(2000);
+  }
+  private openSnackBarCancelOrder() {
+    debugger;
+    this._snackBar.openFromComponent(NewSignupNotificationComponent, {
+      duration: this.durationInSeconds * 1000,
+    });
   }
 }

@@ -18,6 +18,4 @@ export class LayoutComponent implements OnInit {
   ngOnInit(): void {
     this.purchased = this.basketService.orderedItems;
   }
-
-  onScroll(eve: any) {}
 }
