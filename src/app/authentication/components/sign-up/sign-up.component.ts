@@ -38,7 +38,6 @@ export class SignUpComponent implements OnInit {
   }
 
   onSubmit(form?: FormGroup) {
-    debugger;
     this.myForm?.get('firstName')?.value;
     this.myForm?.get('lastName')?.value;
     this.myForm?.get('email')?.value;
@@ -49,7 +48,6 @@ export class SignUpComponent implements OnInit {
     delay(2000);
   }
   private openSnackBarCancelOrder() {
-    debugger;
     this._snackBar.openFromComponent(NewSignupNotificationComponent, {
       duration: this.durationInSeconds * 1000,
     });

@@ -16,7 +16,6 @@ export class SignUpService {
     this.users.push(eve);
   }
   postNewSignUp(data?: SignUp) {
-    debugger;
     this.http
       .post(
         'https://bahar-shopping-default-rtdb.europe-west1.firebasedatabase.app/posts.json',
@@ -40,7 +39,6 @@ export class SignUpService {
     );
   }
   profile(userName: string, password: string) {
-    debugger;
     this.user = { email: userName, password: password };
     this.findCustomer().subscribe((obj) => {
       let property: keyof typeof obj;

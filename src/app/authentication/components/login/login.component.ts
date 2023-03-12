@@ -79,7 +79,6 @@ export class LoginComponent implements OnInit {
   }
 
   loginSucces() {
-    debugger;
     this.loginSuccess = true;
     this.showFailed = false;
     this.signUpService.profile(
@@ -95,7 +94,6 @@ export class LoginComponent implements OnInit {
     this.loginSuccess = false;
   }
   private openSnackBarCancelOrder() {
-    debugger;
     this._snackBar.openFromComponent(LoginNotificationComponent, {
       duration: this.durationInSeconds * 1000,
       panelClass: ['warning'],

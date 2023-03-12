@@ -197,16 +197,16 @@ export const BestSellerParcel = [
 
 export const BestSellerClothes = [
   {
-    image: '../../../../assets/Best-sellings/1/best-m.webp',
-    name: 'AXS',
+    image: '../../../assets/Best-sellings/shoes-1.jpg',
+    name: 'Men gucci',
     availability: 21,
     id: 56119821546,
-    color: 'gray',
+    color: 'black - gray',
     price: '49',
     discount: 9,
-    weight: '3.15',
-    producedYear: '2015',
-    waranty: '1 year',
+    weight: '715g',
+    producedYear: '2022',
+    waranty: '2 year',
     describtion:
       'Mini design: Mini GPS tracker, dimensions 47mm x 24mm x 18mm. Only one coin ♦♦♦ Wide use: The GPS tracker is designed for use anywhere Wallet wallet bags childrens bags important documents.But you can also use it in the car boat motor etc.and so on.You can use it anywhere. ♦♦♦ Built-in magnet: the live tracking functions are limitless.The mini GPS tracker has a strong magnet',
   },

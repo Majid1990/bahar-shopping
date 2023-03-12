@@ -15,7 +15,6 @@ export class GalleryComponent implements OnInit {
   constructor(private galleryService: GalleryService) {}
 
   ngOnInit(): void {
-    debugger;
     this.galleryService.getGalleryData().subscribe((x) => {
       this.advertismentimages = x;
     });

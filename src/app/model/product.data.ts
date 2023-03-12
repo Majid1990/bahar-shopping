@@ -822,7 +822,7 @@ export const PRODUCT_DATA: Product[] = [
   {
     image: '../../../assets/Top-sellers/Apple watch/1.webp',
     name: 'Apple watch 1',
-    price: '54874',
+    price: '326',
     availability: 405,
     id: 251684,
     weight: '200g',
@@ -833,7 +833,7 @@ export const PRODUCT_DATA: Product[] = [
   {
     image: '../../../assets/Top-sellers/Apple watch/2.webp',
     name: 'Apple watch 2',
-    price: '12384',
+    price: '699',
     availability: 61,
     id: 785485,
     weight: '200g',
@@ -855,7 +855,7 @@ export const PRODUCT_DATA: Product[] = [
   {
     image: '../../../assets/Top-sellers/Apple watch/4.webp',
     name: 'Apple watch 4',
-    price: '54874',
+    price: '98',
     availability: 405,
     id: 4500487,
     weight: '200g',
@@ -866,7 +866,7 @@ export const PRODUCT_DATA: Product[] = [
   {
     image: '../../../assets/Top-sellers/Apple watch/5.webp',
     name: 'Apple watch 5',
-    price: '12384',
+    price: '765',
     availability: 61,
     id: 321504,
     weight: '200g',
@@ -888,7 +888,7 @@ export const PRODUCT_DATA: Product[] = [
   {
     image: '../../../assets/Top-sellers/Apple watch/7.webp',
     name: 'Apple watch 7',
-    price: '54874',
+    price: '179',
     availability: 405,
     id: 2001587,
     weight: '200g',
@@ -899,7 +899,7 @@ export const PRODUCT_DATA: Product[] = [
   {
     image: '../../../assets/Top-sellers/Apple watch/8.webp',
     name: 'Apple watch 8',
-    price: '12384',
+    price: '920',
     availability: 61,
     id: 625107,
     weight: '200g',
@@ -921,7 +921,7 @@ export const PRODUCT_DATA: Product[] = [
   {
     image: '../../../assets/Top-sellers/Apple watch/10.webp',
     name: 'Apple watch 10',
-    price: '54874',
+    price: '218',
     availability: 405,
     id: 60589,
     weight: '200g',
@@ -932,7 +932,7 @@ export const PRODUCT_DATA: Product[] = [
   {
     image: '../../../assets/Top-sellers/Apple watch/11.jpg',
     name: 'Apple watch 11',
-    price: '12384',
+    price: '199',
     availability: 61,
     id: 30598408,
     weight: '200g',

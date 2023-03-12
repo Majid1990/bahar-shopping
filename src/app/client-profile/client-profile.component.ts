@@ -16,7 +16,6 @@ export class ClientProfileComponent implements OnInit {
   constructor(private signUpService: SignUpService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
-    debugger;
     this.users = this.signUpService.users;
     this.user = this.users.find(
       (x) =>
@@ -30,13 +29,16 @@ export class ClientProfileComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(ClientProfileDialogComponent, {
-      height: '600px',
+      height: '700px',
       width: '900px',
       data: {
         firstName: this.user?.firstName,
         lastName: this.user?.lastName,
         email: this.user?.email,
         password: this.user?.password,
+        address: this.user?.address,
+        phoneNumber: this.user?.phoneNumber,
+        workAddress: this.user?.workAddress,
       },
     });
 

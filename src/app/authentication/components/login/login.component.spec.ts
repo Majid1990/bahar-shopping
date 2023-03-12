@@ -20,9 +20,9 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  describe('submit', () => {
-    it('should call the submit method');
-    expect(component.submit).toHaveBeenCalled();
-    component.submit();
+  describe('onSubmit', () => {
+    it('should call the onSubmit method');
+    expect(component.onSubmit).toHaveBeenCalled();
+    component.onSubmit();
   });
 });

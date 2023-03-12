@@ -50,7 +50,6 @@ export class OrdersComponent implements OnInit {
     });
   }
   private openSnackBarCancelOrder() {
-    debugger;
     this._snackBar.openFromComponent(OrderCancelNotificationComponent, {
       duration: this.durationInSeconds * 1000,
       panelClass: ['warning'],

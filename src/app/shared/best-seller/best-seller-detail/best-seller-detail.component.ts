@@ -58,7 +58,6 @@ export class BestSellerDetailComponent implements OnInit {
     this.router.navigate;
   }
   private openSnackBar() {
-    debugger;
     this._snackBar.openFromComponent(OrderConfirmNotificationComponent, {
       duration: this.durationInSeconds * 1000,
       panelClass: ['blue-snackbar'],

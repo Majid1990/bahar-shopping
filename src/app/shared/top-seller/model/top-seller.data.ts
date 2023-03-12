@@ -1152,7 +1152,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/Apple watch/7.webp',
         name: 'Apple watch 7',
-        price: '174:90',
+        price: '210',
         availability: 405,
         id: 2001587,
         weight: '1.57',

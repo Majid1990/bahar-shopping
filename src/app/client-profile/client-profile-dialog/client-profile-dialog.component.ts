@@ -36,7 +36,6 @@ export class ClientProfileDialogComponent {
     this.openSnackBar();
   }
   private openSnackBar() {
-    debugger;
     this._snackBar.openFromComponent(
       ClientProfileChangingNotificationComponent,
       {

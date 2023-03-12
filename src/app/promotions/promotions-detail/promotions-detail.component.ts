@@ -59,7 +59,6 @@ export class PromotionsDetailComponent implements OnInit {
     this.openSnackBar();
   }
   private openSnackBar() {
-    debugger;
     this._snackBar.openFromComponent(OrderConfirmNotificationComponent, {
       duration: this.durationInSeconds * 1000,
     });
