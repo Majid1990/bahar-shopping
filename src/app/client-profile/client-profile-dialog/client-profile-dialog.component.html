@@ -1,44 +1,57 @@
-<h1 mat-dialog-title>Hi {{data.firstName}}</h1>
-<div mat-dialog-content>
-  <p>Your first name?</p>
-  <mat-form-field appearance="fill">
-    <mat-label>First name: </mat-label>
-    <input matInput [(ngModel)]="data.firstName">
-  </mat-form-field>
-  <p>Your last name?</p>
-  <mat-form-field appearance="fill">
-    <mat-label>Last name: </mat-label>
-    <input matInput [(ngModel)]="data.lastName">
-  </mat-form-field>
-  <p>Your email address?</p>
-  <mat-form-field appearance="fill">
-    <mat-label>Email: </mat-label>
-    <input matInput [(ngModel)]="data.email">
-  </mat-form-field>
-  <p>Your password?</p>
-  <mat-form-field appearance="fill">
-    <mat-label>Password: </mat-label>
-    <input matInput [(ngModel)]="data.password">
-  </mat-form-field>
-
-  <p>Your Address?</p>
-  <mat-form-field appearance="fill">
-    <mat-label>Address: </mat-label>
-    <input matInput [(ngModel)]="data.address">
-  </mat-form-field>
-  <p>Your phone number?</p>
-  <mat-form-field appearance="fill">
-    <mat-label>First name: </mat-label>
-    <input matInput [(ngModel)]="data.phoneNumber">
-  </mat-form-field>
-  <p>Your workA address?</p>
-  <mat-form-field appearance="fill">
-    <mat-label>Work address: </mat-label>
-    <input matInput [(ngModel)]="data.workAddress">
-  </mat-form-field>
-
+<div class="flex justify-end">
+  <span title="Close" class="cursor-pointer hover:bg-rose-700 py-1 px-2 rounded hover:text-white bg-rose-500 text-white"
+    type="button" (click)="onNoClick()">
+    X
+  </span>
 </div>
-<div mat-dialog-actions>
+<h1 class="text-center" mat-dialog-title>Hi <span class="text-green-600"> {{data.firstName}}</span></h1>
+
+<div mat-dialog-content>
+  <div class="flex overflow-hidden">
+    <div class="ml-4">
+      <p>Your first name?</p>
+      <mat-form-field appearance="fill">
+        <mat-label>First name: </mat-label>
+        <input matInput [(ngModel)]="data.firstName">
+      </mat-form-field>
+      <p>Your last name?</p>
+      <mat-form-field appearance="fill">
+        <mat-label>Last name: </mat-label>
+        <input matInput [(ngModel)]="data.lastName">
+      </mat-form-field>
+      <p>Your email address?</p>
+      <mat-form-field appearance="fill">
+        <mat-label>Email: </mat-label>
+        <input matInput [(ngModel)]="data.email">
+      </mat-form-field>
+      <p>Your password?</p>
+      <mat-form-field appearance="fill">
+        <mat-label>Password: </mat-label>
+        <input matInput [(ngModel)]="data.password">
+      </mat-form-field>
+
+
+    </div>
+    <div class="ml-4">
+      <p>Your phone number?</p>
+      <mat-form-field appearance="fill">
+        <mat-label>phone number: </mat-label>
+        <input matInput [(ngModel)]="data.phoneNumber">
+      </mat-form-field>
+      <p>Your work address?</p>
+      <mat-form-field appearance="fill">
+        <mat-label>Work address: </mat-label>
+        <input matInput [(ngModel)]="data.workAddress">
+      </mat-form-field>
+      <p>Your Address?</p>
+      <mat-form-field appearance="fill">
+        <mat-label>Address: </mat-label>
+        <input matInput [(ngModel)]="data.address">
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+<div class="text-center ml-10" mat-dialog-actions>
   <button class="hover:bg-rose-700 hover:text-white bg-rose-500 text-white" type="button" mat-button
     (click)="onNoClick()"> Close
   </button>

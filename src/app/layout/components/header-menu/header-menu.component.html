@@ -1,25 +1,25 @@
-<div class="" (scroll)="changeTabbar($event.target)">
+<div (scroll)="changeTabbar($event.target)">
   <div class="flex-container flex text-sm text-center w-max mt-24">
-    <a [routerLink]="'/home'" class="shrink h-14 text-black"> <span>
+    <a [routerLink]="'/all-products'" class="shrink h-14 text-black"> <span>
         <mat-icon class="material-icons md1">next_week</mat-icon>
       </span>Products</a>
-    <a class="shrink  h-14" [routerLink]="['/home']"> <span>
-        <mat-icon>home</mat-icon>
+    <a class="shrink h-14" [routerLink]="['/home']"> <span>
+        <mat-icon class="curso">home</mat-icon>
       </span>Home</a>
-    <a class="shrink  h-14" [routerLink]="'market'"><span>
-        <mat-icon>store</mat-icon>
-      </span>Market</a>
-    <a class="shrink  h-14" [routerLink]="'best-seller'"> <span>
-        <mat-icon>shop</mat-icon>
-      </span>Best seller</a>
-    <a class="shrink  h-14" [routerLink]="['/promotions']"> <span>
-        <mat-icon>card_giftcard</mat-icon>
-      </span>Promotions</a>
-    <a class="shrink  h-14" [routerLink]="['/home']"><span>
-        <mat-icon> beenhere</mat-icon>
-      </span>Recommendations</a>
-    <a class="shrink  h-14" [routerLink]="'top-seller'"><span>
+    <a class="shrink h-14" [routerLink]="'top-seller'"><span>
         <mat-icon> local_play</mat-icon>
       </span>Top seller</a>
+    <a class="shrink h-14" [routerLink]="'market'"><span>
+        <mat-icon>store</mat-icon>
+      </span>Market</a>
+    <a class="shrink h-14" [routerLink]="'best-seller'"> <span>
+        <mat-icon>shop</mat-icon>
+      </span>Best seller</a>
+    <a class="shrink h-14" [routerLink]="['/promotions']"> <span>
+        <mat-icon>card_giftcard</mat-icon>
+      </span>Promotions</a>
+    <a class="shrink h-14" [routerLink]="['/home']"><span>
+        <mat-icon> beenhere</mat-icon>
+      </span>Recommendations</a>
   </div>
 </div>

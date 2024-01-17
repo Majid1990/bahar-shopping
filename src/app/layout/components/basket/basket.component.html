@@ -9,16 +9,17 @@
          border-radius: 3em; padding: 0px 2px;">{{basketService.orderedItems.length}}</span>
      </a>
    </div>
+   <div class="person" [routerLink]="'client-profile'"
+     style="font-size:1.2vw; position: fixed; top: 1%; right: 1%; cursor: pointer;">
+     <mat-icon>person</mat-icon>
+   </div>
    <div [routerLink]="'authentication/login'">
-     <span class="relative top-2.5 login border rounded-md py-2.5 px-2.5 ml-5 text-sm duration-300 ease-in-out 
+     <span style="font-size:1vw;" class="relative top-2.5 login border rounded-md py-2.5 px-2.5 ml-5 text-sm duration-300 ease-in-out 
        hover:bg-lime-700 hover:text-white cursor-pointer">
        <span class="material-icons mr-1.5 relative top-1.5 text-lg">
          login
        </span>
        | Login
      </span>
-   </div>
-   <div class="person" [routerLink]="'client-profile'" style="position: fixed; top: 1%; right: 1%; cursor: pointer;">
-     <mat-icon>person</mat-icon>
    </div>
  </div>

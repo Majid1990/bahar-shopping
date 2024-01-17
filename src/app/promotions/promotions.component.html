@@ -11,7 +11,7 @@
         <mat-icon class="text-yellow-500">star_half</mat-icon>
         <mat-icon class="text-green-700">assignment_turned_in</mat-icon>
       </span>
-      <div class="content-end justify-center">
+      <div class="content-end justify-center relative">
         <p class="text-sky-700"><span class="text-black"></span> {{item.name}} </p>
         <p><span class="text-lime-900 text-lg font-mono">{{item.price}}€</span> </p>
         <p *ngIf="item.discount"><span class="text-lime-900"><span
@@ -21,9 +21,11 @@
           {{item.availability}}<mat-icon>event_available</mat-icon>
         </p>
         <p class="text-sky-700"> {{item.shortDescribtion}} </p>
-        <div *ngIf="item.freeDelivery" style="position: relative; top: 50px; right: 90%;"> <span
-            class="text-white font-serif text-xs py-2 px-1 rounded-full bg-green-600">Free
-            <mat-icon class="bg-white-100"> local_shipping</mat-icon></span></div>
+        <div *ngIf="item.freeDelivery" style="position: relative;">
+          <span class="text-white font-serif text-xs py-1 px-1 rounded-full bg-green-600">Free
+            <mat-icon class="bg-white-100"> local_shipping</mat-icon>
+          </span>
+        </div>
         <br>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { map, Subscription, timer } from 'rxjs';
 import { GalleryService } from '../../gallery.service';
 
 @Component({
@@ -11,14 +12,23 @@ export class GalleryComponent implements OnInit {
   selectedAdvertismentIndex: number = 0;
   selectedAdvertismentImageUrl: string =
     '../../../../assets/gallery/gallery-8.jpg';
-
+  timerSubscription?: Subscription;
   constructor(private galleryService: GalleryService) {}
 
   ngOnInit(): void {
+    this.timerSubscription = timer(0, 5000)
+      .pipe(
+        map(() => {
+          this.nextImage();
+        })
+      )
+      .subscribe();
+
     this.galleryService.getGalleryData().subscribe((x) => {
       this.advertismentimages = x;
     });
   }
+
   nextImage() {
     this.selectedAdvertismentIndex++;
     if (this.selectedAdvertismentIndex === this.advertismentimages.length) {

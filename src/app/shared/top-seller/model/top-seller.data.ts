@@ -210,7 +210,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/top-sellers-book/book-13.jpg',
         name: 'book 13',
-        price: '78',
+        price: '157',
         discount: 12,
         availability: 27,
         id: 6524507,
@@ -297,7 +297,7 @@ export const TopSellingItems: ITopSelling[] = [
         price: '68',
         discount: 16,
         availability: 9,
-        id: 9652407,
+        id: 19652407,
         weight: '1.57',
         color: 'green',
         producedYear: '2021',
@@ -334,7 +334,7 @@ export const TopSellingItems: ITopSelling[] = [
           'Mini design: Mini GPS tracker, dimensions 47mm x 24mm x 18mm. Only one coin ♦♦♦ Wide use: The GPS tracker is designed for use anywhere Wallet wallet bags childrens bags important documents.But you can also use it in the car boat motor etc.and so on.You can use it anywhere. ♦♦♦ Built-in magnet: the live tracking functions are limitless.The mini GPS tracker has a strong magnet...',
       },
       {
-        image: '../../../assets/Top-sellers/top-sellers-book/Book 22.jpg',
+        image: '../../assets/Top-sellers/top-sellers-book/Book 22.jpg',
         name: 'book 22',
         price: '28',
         discount: 35,
@@ -470,7 +470,7 @@ export const TopSellingItems: ITopSelling[] = [
         price: '39',
         discount: 4,
         availability: 9,
-        id: 875849,
+        id: 86975849,
         weight: '1.57',
         color: 'green',
         producedYear: '2021',
@@ -521,7 +521,7 @@ export const TopSellingItems: ITopSelling[] = [
           'Mini design: Mini GPS tracker, dimensions 47mm x 24mm x 18mm. Only one coin ♦♦♦ Wide use: The GPS tracker is designed for use anywhere Wallet wallet bags childrens bags important documents.But you can also use it in the car boat motor etc.and so on.You can use it anywhere. ♦♦♦ Built-in magnet: the live tracking functions are limitless.The mini GPS tracker has a strong magnet...',
       },
       {
-        image: '../../../assets/Top-sellers/top-sellers-pen/pen11.jpg',
+        image: '../../../assets/Top-sellers/top-sellers-pen/Pen-11.webp',
         name: 'Pen 11',
         price: '75',
         availability: 84,
@@ -586,7 +586,7 @@ export const TopSellingItems: ITopSelling[] = [
           'Mini design: Mini GPS tracker, dimensions 47mm x 24mm x 18mm. Only one coin ♦♦♦ Wide use: The GPS tracker is designed for use anywhere Wallet wallet bags childrens bags important documents.But you can also use it in the car boat motor etc.and so on.You can use it anywhere. ♦♦♦ Built-in magnet: the live tracking functions are limitless.The mini GPS tracker has a strong magnet...',
       },
       {
-        image: '../../../assets/Top-sellers/top-sellers-pen/pen16.jpg',
+        image: '../../assets/Top-sellers/top-sellers-mobile/ihpne-12',
         name: 'Pen 16',
         price: '32',
         availability: 57,
@@ -658,7 +658,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/top-sellers-mobile/phone1.jpg',
         name: 'Mobile 1',
-        price: '25',
+        price: '925',
         discount: 4,
         availability: 27,
         id: 527540089,
@@ -672,7 +672,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/top-sellers-mobile/phone2.jpg',
         name: 'Mobile 2',
-        price: '112',
+        price: '290',
         discount: 3,
         availability: 69,
         id: 964527,
@@ -714,7 +714,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/top-sellers-mobile/phone5.jpg',
         name: 'Mobile 5',
-        price: '25',
+        price: '225',
         discount: 5,
         availability: 26,
         id: 8954642,
@@ -741,7 +741,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/top-sellers-mobile/phone7.jpg',
         name: 'Mobile 7',
-        price: '39',
+        price: '539',
         discount: 7,
         availability: 9,
         id: 54261,
@@ -768,7 +768,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/top-sellers-mobile/phone9.jpg',
         name: 'Mobile 9',
-        price: '78',
+        price: '378',
         availability: 112,
         id: 6345,
         weight: '1.57',
@@ -781,7 +781,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/top-sellers-mobile/phone10.jpg',
         name: 'Mobile 10',
-        price: '35',
+        price: '335',
         availability: 327,
         id: 7845,
         weight: '1.57',
@@ -807,7 +807,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/top-sellers-mobile/phone12.jpg',
         name: 'Mobile 12',
-        price: '178',
+        price: '778',
         discount: 5,
         availability: 31,
         id: 785454,
@@ -821,7 +821,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/top-sellers-mobile/phone13.jpg',
         name: 'Mobile 13',
-        price: '157',
+        price: '857',
         availability: 27,
         id: 5317,
         weight: '1.57',
@@ -848,7 +848,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/top-sellers-mobile/phone15.jpg',
         name: 'Mobile 15',
-        price: '45',
+        price: '190',
         availability: 12,
         id: 7867824,
         weight: '1.57',
@@ -859,9 +859,9 @@ export const TopSellingItems: ITopSelling[] = [
           'Mini design: Mini GPS tracker, dimensions 47mm x 24mm x 18mm. Only one coin ♦♦♦ Wide use: The GPS tracker is designed for use anywhere Wallet wallet bags childrens bags important documents.But you can also use it in the car boat motor etc.and so on.You can use it anywhere. ♦♦♦ Built-in magnet: the live tracking functions are limitless.The mini GPS tracker has a strong magnet...',
       },
       {
-        image: '../../../assets/Top-sellers/top-sellers-mobile/phone16.jpg',
-        name: 'Pen 16',
-        price: '32',
+        image: '../../assets/Top-sellers/top-sellers-mobile/ihpne-12',
+        name: 'Iphone',
+        price: '900',
         discount: 3,
         availability: 57,
         id: 957845,
@@ -874,8 +874,8 @@ export const TopSellingItems: ITopSelling[] = [
       },
       {
         image: '../../../assets/Top-sellers/top-sellers-mobile/phone17.jpg',
-        name: 'Pen 17',
-        price: '12',
+        name: 'phone17',
+        price: '1175',
         availability: 26,
         id: 5642584,
         weight: '1.57',
@@ -988,7 +988,7 @@ export const TopSellingItems: ITopSelling[] = [
         name: 'TV 8',
         price: '524',
         discount: 6,
-        availability: 64,
+        availability: 14,
         id: 875849,
         weight: '1.57',
         color: 'green',
@@ -1071,7 +1071,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/Apple watch/1.webp',
         name: 'Apple watch 1',
-        price: '112',
+        price: '326',
         discount: 12,
         availability: 405,
         id: 251684,
@@ -1085,7 +1085,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/Apple watch/2.webp',
         name: 'Apple watch 2',
-        price: '129',
+        price: '699',
         availability: 61,
         id: 785485,
         weight: '1.57',
@@ -1098,7 +1098,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/Apple watch/3.webp',
         name: 'Apple watch 3',
-        price: '440',
+        price: '1440',
         discount: 25,
         availability: 74,
         id: 24578,
@@ -1125,7 +1125,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/Apple watch/5.webp',
         name: 'Apple watch 5',
-        price: '184',
+        price: '765',
         discount: 20,
         availability: 61,
         id: 321504,
@@ -1139,7 +1139,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/Apple watch/6.webp',
         name: 'Apple watch 6',
-        price: '240',
+        price: '1740',
         availability: 74,
         id: 8970548,
         weight: '1.57',
@@ -1165,7 +1165,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/Apple watch/8.webp',
         name: 'Apple watch 8',
-        price: '384',
+        price: '920',
         discount: 30,
         availability: 61,
         id: 625107,
@@ -1179,7 +1179,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/Apple watch/9.webp',
         name: 'Apple watch 9',
-        price: '140',
+        price: '625',
         discount: 36,
         availability: 74,
         id: 6540075,
@@ -1193,7 +1193,7 @@ export const TopSellingItems: ITopSelling[] = [
       {
         image: '../../../assets/Top-sellers/Apple watch/10.webp',
         name: 'Apple watch 10',
-        price: '874',
+        price: '784',
         availability: 405,
         id: 60589,
         weight: '1.57',

@@ -29,7 +29,7 @@ export class ClientProfileComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(ClientProfileDialogComponent, {
-      height: '700px',
+      height: '650px',
       width: '900px',
       data: {
         firstName: this.user?.firstName,

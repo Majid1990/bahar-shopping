@@ -17,7 +17,8 @@ import { NewSignupNotificationComponent } from './new-signup-notification/new-si
 })
 export class SignUpComponent implements OnInit {
   myForm?: FormGroup;
-  durationInSeconds = 2;
+  validToRegister: boolean = false;
+  durationInSeconds = 2; 
 
   constructor(
     private signUpService: SignUpService,
@@ -38,14 +39,19 @@ export class SignUpComponent implements OnInit {
   }
 
   onSubmit(form?: FormGroup) {
-    this.myForm?.get('firstName')?.value;
-    this.myForm?.get('lastName')?.value;
-    this.myForm?.get('email')?.value;
-    this.myForm?.get('password')?.value;
-    this.signUpService.postNewSignUp(form?.value);
-    this.myForm?.reset();
-    this.openSnackBarCancelOrder();
-    delay(2000);
+    if (this.myForm?.valid) {
+      this.myForm?.get('firstName')?.value;
+      this.myForm?.get('lastName')?.value;
+      this.myForm?.get('email')?.value;
+      this.myForm?.get('password')?.value;
+      this.signUpService.postNewSignUp(form?.value);
+      this.myForm?.reset();
+      this.myForm.clearValidators;
+      this.openSnackBarCancelOrder();
+      delay(2000);
+    } else {
+      this.validToRegister = true;
+    }
   }
   private openSnackBarCancelOrder() {
     this._snackBar.openFromComponent(NewSignupNotificationComponent, {

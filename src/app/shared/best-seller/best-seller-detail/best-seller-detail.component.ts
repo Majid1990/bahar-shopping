@@ -15,6 +15,8 @@ export class BestSellerDetailComponent implements OnInit {
   itemInfo: any;
   id: any;
   durationInSeconds = 2;
+  imageHover: boolean = false;
+  imageHovered: boolean = true;
   constructor(
     private basketService: BasketService,
     private bestSellerService: BestSellerService,
@@ -24,6 +26,7 @@ export class BestSellerDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    debugger;
     window.scrollTo(0, 0);
     this.route.queryParams.subscribe((params) => {
       this.id = +params['id'];

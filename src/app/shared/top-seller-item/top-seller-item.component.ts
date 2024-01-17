@@ -20,6 +20,7 @@ export class TopSellerItemComponent implements OnInit {
   filteredBestSellingProducts?: ITopSellingItem[] = [];
   quantityCounter: number = 0;
   durationInSeconds = 2;
+  akbarData: any;
 
   @ViewChild('f') prop?: NgForm;
   constructor(

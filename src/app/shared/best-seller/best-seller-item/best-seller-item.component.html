@@ -9,7 +9,8 @@
         <p class="text-sky-700"> {{bestSeller.name}} </p>
         <p> Available: <span class="text-lime-900"> {{bestSeller.availability}} </span></p>
         <p> Price: <span class="text-lime-900"> {{bestSeller.price}} </span> </p>
-        <p> <span class="px-2 text-white rounded bg-rose-600"> {{bestSeller.discount}}%</span></p>
+        <p *ngIf="bestSeller.discount"> <span class="px-2 text-white rounded bg-rose-600">
+            {{bestSeller.discount}}%</span></p>
         <br>
       </div>
     </div>

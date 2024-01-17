@@ -26,8 +26,11 @@
           style="color: red; font-size: x-small; padding-bottom: 15px;">At
           least 5 characters</span>
       </mat-form-field><br>
-      <button [routerLink]="'/authentication/login'" (click)="onSubmit(myForm)" type="submit" mat-raised-button
-        color="primary"> Register </button>
+
+      <!-- [routerLink]="'/authentication/login'" -->
+      <button (click)="onSubmit(myForm)" type="submit" mat-raised-button color="primary"> Register </button>
+      <div *ngIf="validToRegister" class="text-rose-500">Please fill the fields
+        correctly</div>
       <div class="text-xs text-slate-500 mt-2">Already have an account?</div>
       <button type="button" [routerLink]="'/authentication/login'"
         class="rounded hover:text-white hover:cursor-pointer p-3 text-white mt-2 bg-gray-500 hover:bg-blue-700">

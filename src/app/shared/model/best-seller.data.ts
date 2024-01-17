@@ -131,10 +131,10 @@ export const BEST_SELLING_DATA = [
     availability: 857,
     id: 5421087,
     color: 'white',
-    price: '2035.56',
+    price: '95.90',
     weight: '4.15',
-    producedYear: '2019',
-    waranty: '3 years',
+    producedYear: '2023',
+    waranty: '1 years',
     describtion:
       'Mini design: Mini GPS tracker, dimensions 47mm x 24mm x 18mm. Only one coin ♦♦♦ Wide use: The GPS tracker is designed for use anywhere Wallet wallet bags childrens bags important documents.But you can also use it in the car boat motor etc.and so on.You can use it anywhere. ♦♦♦ Built-in magnet: the live tracking functions are limitless.The mini GPS tracker has a strong magnet',
   },

@@ -93,14 +93,15 @@ export const GALLERY_DATA: Gallery[] = [
 
 export const GALLERY_DATA_PICTURE = [
   '../../assets/gallery/gallery.jpg',
-  '../../assets/gallery/gallery1.jpg',
-  '../../assets/gallery/galery2.jpg',
-  '../../assets/gallery/gallery3.jpg',
+  '../../../../assets/gallery/gallery-8.jpg',
   '../../assets/gallery/gallery-4.jpg',
+  '../../assets/gallery/gallery-9.jpg',
+  '../../assets/gallery/gallery3.jpg',
   '../../assets/gallery/gallery5.jpg',
   '../../assets/gallery/galery6.jpg',
   '../../assets/gallery/gallery7.jpg',
   '../../assets/gallery/gallery-8.jpg',
-  '../../assets/gallery/gallery-9.jpg',
   '../../assets/gallery/gallery-10.jpg',
+  '../../assets/gallery/gallery1.jpg',
+  '../../assets/gallery/galery2.jpg',
 ];

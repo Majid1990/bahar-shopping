@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
 import { MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
@@ -9,8 +8,10 @@ import { MatMenuTrigger } from '@angular/material/menu';
 })
 export class AllProductsComponent implements OnInit {
   @ViewChild(MatMenuTrigger) trigger?: MatMenuTrigger;
+
   constructor() {}
   ngOnInit(): void {}
+
   someMethod() {
     this.trigger?.closeMenu();
   }
